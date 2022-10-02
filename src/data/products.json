@@ -1,0 +1,72 @@
+[
+ {
+  "id": 1,
+  "categories": "Buzos",
+  "price": 4700,
+  "discount": 40,
+  "name": "Hoddie Infinite  ",
+  "size": [
+   "XS",
+   "S",
+   "L",
+   "XL"
+  ],
+  "color": "Red",
+  "longDescription": "     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo           ",
+  "img": "images/products/category_5.jpg",
+  "img2": "hoddie_infinite_01.jpg",
+  "img3": "hoddie_infinite_02.jpg"
+ },
+ {
+  "id": 2,
+  "categories": "Pantalones",
+  "price": 2800,
+  "discount": 10,
+  "name": "Joger solvang",
+  "size": "M",
+  "color": "Grey",
+  "longDescription": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo   ",
+  "img": "images/products/category_2.jpg",
+  "img2": "img-remera-1.jpg",
+  "img3": "img-remera-2.jpg"
+ },
+ {
+  "id": 3,
+  "categories": "Remeras",
+  "price": 1200,
+  "discount": 37,
+  "name": "Remera",
+  "size": "M",
+  "color": "Grey",
+  "longDescription": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo",
+  "img": "images/products/category_1.jpg",
+  "img2": "img-remera-1.jpg",
+  "img3": "img-remera-2.jpg"
+ },
+ {
+  "id": 4,
+  "categories": "Shorts",
+  "price": 2500,
+  "discount": 7,
+  "name": "Short",
+  "size": "M",
+  "color": "Grey",
+  "longDescription": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo",
+  "img": "images/products/category_4.jpg",
+  "img2": "img-remera-1.jpg",
+  "img3": "img-remera-2.jpg"
+ },
+ {
+  "id": 5,
+  "categories": "Camisas",
+  "price": 15000,
+  "discount": 25,
+  "name": "Camisa",
+  "size": "M",
+  "color": "Grey",
+  "longDescription": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo",
+  "img": "images/products/category_3.jpg",
+  "img2": "img-remera-1.jpg",
+  "img3": "img-remera-2.jpg"
+ }
+]

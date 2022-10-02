@@ -1,0 +1,18 @@
+[
+    {
+    "id": 1,
+    "categories": "Musculosa",
+    "price": 2000.00,
+    "discount": 40,
+    "name": "Hoddie Infinite  ",
+    "description":"convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla",
+    "size": [
+    "XS",
+    "S",
+    "L",
+    "XL"
+  ],
+  "stock":5
+    }
+
+]
