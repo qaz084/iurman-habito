@@ -4,6 +4,8 @@ import { Categories,ItemListContainer,CardProductsDetail  } from './components/p
 import Users from './data/users.json';
 import ProductImage from './images/products/biker_01.jpg';
 import ProductData from './data/productsDetails.json';
+import { ScrollToTopButton } from './components/ScrollToTopButton';
+import { Footer } from './components/footer/Footer';
 
 export default function App() {
 
@@ -13,6 +15,7 @@ export default function App() {
     < >
       <Navbar/>
       <main>
+        <ScrollToTopButton/>
         <ItemListContainer greetings={Users}/>
        
         <Categories />
@@ -23,6 +26,9 @@ export default function App() {
         />
 
       </main>
+      <footer>
+        <Footer/>
+      </footer>
     </>
   );
 }

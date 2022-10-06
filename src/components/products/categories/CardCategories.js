@@ -7,7 +7,7 @@ export const CardCategories = ({title,description,image,id}) => {
         <div className="flex flex-row bg-white duration-500 ease-in ">
 
           {/* IMAGE */}
-          <div className="overflow-hidden  m-auto w-1/3">
+          <div className="overflow-hidden  m-auto w-2/3">
             <img className=" duration-[1000ms] ease-in group-hover:scale-110 " src={image} alt={title} />
           </div>
 
