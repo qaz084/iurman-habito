@@ -1,0 +1,15 @@
+
+export const Spinner = () => {
+  return (
+    <>
+      <div className="flex justify-center items-center justify-items-center">
+        <div
+          className="spinner-border animate-spin inline-block w-20 h-20 border-8 rounded-full"
+          role="status"
+        >
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </>
+  );
+}

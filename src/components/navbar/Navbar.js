@@ -2,12 +2,9 @@ import { useState } from 'react'
 
 import HabitoLogo from '../../images/logo_blanco.svg'
 import HeaderImg1 from '../../images/header/banner_02.png'
+import {CartWidget,Searchbar,UserWidget} from '../../components'
 
-import CartWidget from '../cart/CartWidget'
-import Searchbar from '../searchbar/Searchbar'
-import UserWidget from '../user/UserWidget'
-
-const Navbar = () => {
+export const Navbar = () => {
 
   // Seteo el estado para la transparencia del navbar
 
@@ -53,4 +50,3 @@ const Navbar = () => {
   )
 }
 
-export default Navbar

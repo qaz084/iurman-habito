@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 export const CardProductsButtons = ({productQuantity}) => {
-    console.log(productQuantity);
+   
 
  // Counter State------------
     const productsCounter=1;

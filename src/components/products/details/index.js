@@ -1,1 +1,2 @@
-export * from './CardProductsDetail';
+export * from './ItemDetail';
+export * from './ItemDetailContainer';

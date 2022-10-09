@@ -1,29 +1,31 @@
-import React from 'react'
+
 import { CardProductsButtons } from './CardProductsButtons'
 
-export const CardProductsDetail = ({img,productName,productPrice,productQuantity}) => {
-    
+export const Item = ({ItemData}) => {
+ 
+    const {img1,name,price,quantity}=ItemData;
+
   return (
     <>
          <h1 className=" m-auto font-bold text-primary text-4xl text-center mt-20">Modelo Product Card para próximo desafio</h1>
         <div className="flex flex-col group w-52 mt-20 mx-auto max-w-screen-sm shadow-lg m-4 rounded-md overflow-hidden">
         
              {/* -------Image------------- */}
-            <div>
-             <img className="" src={img} alt="" />
+            <div className="cursor-pointer overflow-hidden">
+             <img className="duration-700 ease-in hover:scale-110" src={img1} alt="" />
             </div>
 
             <div className="flex flex-col">
 
                 <div className="flex flex-col mt-3 ml-5">
-                    <h4>{productName}</h4>
-                    <h2 className="text-primary font-bold text-2xl">${productPrice}</h2>
+                    <h4>{name}</h4>
+                    <h2 className="text-primary font-bold text-2xl">${price}</h2>
                 </div>
 
                 {/* -------Buttons------------- */}
             
                 <CardProductsButtons
-                    productQuantity={productQuantity}
+                    productQuantity={quantity}
                 />
 
             </div>
