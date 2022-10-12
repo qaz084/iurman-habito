@@ -1,5 +1,7 @@
-import {ItemListContainer, Categories,Navbar,SaludoUser,ScrollToTopButton,Footer, Spinner} from './components';
+
+import { Categories,Navbar,SaludoUser,ScrollToTopButton,Footer, Spinner} from './components';
 import { useFetchUsers } from './customHooks';
+
 
 export default function App() {
 
@@ -8,7 +10,7 @@ export default function App() {
   return (
     < >
       <Navbar/>
-      
+     
       <main>
       {
         isLoading?<Spinner/>:<SaludoUser greetings={user}/>
@@ -16,7 +18,7 @@ export default function App() {
        
       
         <Categories />
-        <ItemListContainer/>
+       
         <ScrollToTopButton/>
       </main>
 
