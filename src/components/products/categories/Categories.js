@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useFetchCategories } from "../../../customHooks/useFetchCategories";
 
 import { CardCategories } from "./CardCategories";
@@ -14,12 +15,12 @@ export const Categories = () => {
            
               {categories.map(({name,id,img,description})=>{
     
-                return <CardCategories key={id}
+                return <Link to={ `/${name}`}>  <CardCategories key={id}
                   title={name}
                   description={description}
                   image={img}
                   id={id}
-                  />
+                  /></Link>
               })
               }
           </div>

@@ -27,7 +27,7 @@ export const CardProductsButtons = ({productQuantity}) => {
 
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col h-[32]">
             <div className="flex flex-row mt-4 mb-3 mx-6 items-center ">
 
 

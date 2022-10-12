@@ -7,15 +7,16 @@ export const Item = ({ItemData}) => {
 
   return (
     <>
-         <h1 className=" m-auto font-bold text-primary text-4xl text-center mt-20">Modelo Product Card para próximo desafio</h1>
-        <div className="flex flex-col group w-52 mt-20 mx-auto max-w-screen-sm shadow-lg m-4 rounded-md overflow-hidden">
+        
+    <div className="flex flex-col group w-52 mt-20 mx-auto max-w-screen-sm shadow-lg m-4 rounded-md overflow-hidden sm:justify-content
+     ">
         
              {/* -------Image------------- */}
             <div className="cursor-pointer overflow-hidden">
-             <img className="duration-700 ease-in hover:scale-110" src={img1} alt="" />
+             <img className="duration-700 ease-in hover:scale-110 h-full" src={img1} alt="" />
             </div>
 
-            <div className="flex flex-col">
+            <div className="flex flex-col ">
 
                 <div className="flex flex-col mt-3 ml-5">
                     <h4>{name}</h4>
