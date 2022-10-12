@@ -1,14 +1,120 @@
-{
-  "data":[ {
+{"data":[
+   {
     "id": 1,
     "img1": "../images/products/tanktop_01.png",
     "img2": "../images/products/tanktop_02.png",
     "img3": "../images/products/tanktop_03.png",
-    "CategoryId": 3,
+    "img4": "../images/products/tanktop_04.png",
+    "CategoryId": 1,
     "categories": "Remeras",
     "price": 2000.00,
     "discount": 40,
     "name": "Musculosa",
+    "description":"convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla",
+    "size": [
+    "XS",
+    "S",
+    "L",
+    "XL"
+  ],
+  "stock":5
+
+    },
+   {
+    "id": 2,
+    "img1": "../images/products/poloshirt_01.jpg",
+    "img2": "../images/products/poloshirt_02.jpg",
+    "img3": "../images/products/poloshirt_03.jpg",
+    "img4": "../images/products/poloshirt_04.jpg",
+    "CategoryId": 1,
+    "categories": "Remeras",
+    "price": 2000.00,
+    "discount": 40,
+    "name": "Polo",
+    "description":"convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla",
+    "size": [
+    "XS",
+    "S",
+    "L",
+    "XL"
+  ],
+  "stock":5
+
+    },
+   {
+    "id": 3,
+    "img1": "../images/products/tshirt-ejemplo-01.jpg",
+    "img2": "../images/products/tshirt-ejemplo-02.jpg",
+    "img3": "../images/products/tshirt-ejemplo-03.jpg",
+    "img4": "../images/products/tshirt-ejemplo-04.jpg",
+    "CategoryId": 1,
+    "categories": "Remeras",
+    "price": 2000.00,
+    "discount": 40,
+    "name": "Remera",
+    "description":"convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla",
+    "size": [
+    "XS",
+    "S",
+    "L",
+    "XL"
+  ],
+  "stock":5
+
+    },
+   {
+    "id": 4,
+    "img1": "../images/products/jean_01.jpg",
+    "img2": "../images/products/jean_02.jpg",
+    "img3": "../images/products/jean_03.jpg",
+    "img4": "../images/products/jean_04.jpg",
+    "CategoryId": 2,
+    "categories": "Pantalones",
+    "price": 2800,
+    "discount": 40,
+    "name": "Jean",
+    "description":"convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla",
+    "size": [
+    "XS",
+    "S",
+    "L",
+    "XL"
+  ],
+  "stock":5
+
+    },
+   {
+    "id": 5,
+    "img1": "../images/products/joggin_01.jpg",
+    "img2": "../images/products/joggin_02.jpg",
+    "img3": "../images/products/joggin_03.jpg",
+    "img4": "../images/products/joggin_04.jpg",
+    "CategoryId": 2,
+    "categories": "Pantalones",
+    "price": 2800,
+    "discount": 40,
+    "name": "Joggin",
+    "description":"convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla",
+    "size": [
+    "XS",
+    "S",
+    "L",
+    "XL"
+  ],
+  "stock":5
+
+    },
+   {
+    "id": 6,
+    "img1": "../images/products/jogging_01.jpg",
+    "img2": "../images/products/jogging_02.jpg",
+    "img3": "../images/products/jogging_03.jpg",
+    "img4": "../images/products/jogging_04.jpg",
+    "CategoryId": 2,
+    "categories": "Pantalones",
+    "price": 2800,
+    "discount": 40,
+    "name": "Jogging",
     "description":"convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla",
     "size": [
     "XS",

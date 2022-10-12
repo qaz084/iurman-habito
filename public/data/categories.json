@@ -1,7 +1,7 @@
-[
+{"data":[
  {
   "id": 1,
-  "categories": "Buzos",
+  "categories": "Remeras",
   "price": 4700,
   "discount": 40,
   "name": "Hoddie Infinite  ",
@@ -13,9 +13,8 @@
   ],
   "color": "Red",
   "longDescription": "     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo           ",
-  "img": "images/products/category_5.jpg",
-  "img2": "hoddie_infinite_01.jpg",
-  "img3": "hoddie_infinite_02.jpg"
+  "img": "images/products/category_1.jpg"
+
  },
  {
   "id": 2,
@@ -26,22 +25,20 @@
   "size": "M",
   "color": "Grey",
   "longDescription": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo   ",
-  "img": "images/products/category_2.jpg",
-  "img2": "img-remera-1.jpg",
-  "img3": "img-remera-2.jpg"
+  "img": "images/products/category_2.jpg"
+  
  },
  {
   "id": 3,
-  "categories": "Remeras",
+  "categories": "Camisas",
   "price": 1200,
   "discount": 37,
   "name": "Remera",
   "size": "M",
   "color": "Grey",
   "longDescription": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo",
-  "img": "images/products/category_1.jpg",
-  "img2": "img-remera-1.jpg",
-  "img3": "img-remera-2.jpg"
+  "img": "images/products/category_3.jpg"
+
  },
  {
   "id": 4,
@@ -52,21 +49,18 @@
   "size": "M",
   "color": "Grey",
   "longDescription": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo",
-  "img": "images/products/category_4.jpg",
-  "img2": "img-remera-1.jpg",
-  "img3": "img-remera-2.jpg"
+  "img": "images/products/category_4.jpg"
  },
  {
   "id": 5,
-  "categories": "Camisas",
+  "categories": "Buzos",
   "price": 15000,
   "discount": 25,
-  "name": "Camisa",
+  "name": "Hoddie",
   "size": "M",
   "color": "Grey",
   "longDescription": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo",
-  "img": "images/products/category_3.jpg",
-  "img2": "img-remera-1.jpg",
-  "img3": "img-remera-2.jpg"
+  "img": "images/products/category_5.jpg"
+
  }
-]
+]}
