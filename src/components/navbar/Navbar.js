@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import HabitoLogo from '../../images/logo_blanco.svg'
 import HeaderImg1 from '../../images/header/banner_02.png'
@@ -29,19 +30,25 @@ export const Navbar = () => {
       <nav className={!navTheme?"nav-static":"nav-scroll"}>
 
 {/* ---------------LOGO-------------- */}
-        <img className=" w-20 mb-6 sm:mb-0 sm:w-40 cursor-pointer" src={HabitoLogo} alt="Habito white-logo"/>
+        <Link to={'/'}>
+           <img className=" w-20 mb-6 sm:mb-0 sm:w-40 cursor-pointer" src={HabitoLogo} alt="Habito white-logo"/>
+        </Link>
       
         <Searchbar/>
 
         <div className="hidden sm:flex  sm:items-center sm:space-x-8">
 
             <UserWidget/>
-            <CartWidget/>
+
+            <Link to={'/cart'}>
+             <CartWidget/>
+
+            </Link>
             
         </div>
         
       </nav>
-    
+  
       <div className="flex items-center overflow-hidden w-fit bg-grey-100">
          <img  className="hidden sm:inline-block sm:scale-110  sm:mt-40" src={HeaderImg1} alt="Banner Habito HomePage"/>
       </div>

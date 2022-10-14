@@ -4,8 +4,6 @@ export const getDataCategories=async()=>{
     const response=await fetch(url);
     const {data}=await response.json();
 
-   
-
     const dataCategories=data?.map(category => ({
 
         id:category.id,

@@ -7,6 +7,7 @@ export const Categories = () => {
 
   const {categories}=useFetchCategories();
   
+// console.log(categories[0].id);
   return (
     <>
           <div className=" grid grid-cols-1 items-center justify-items-center mt-40 sm:mt-10 sm:grid-cols-2  " >
@@ -15,12 +16,12 @@ export const Categories = () => {
            
               {categories.map(({name,id,img,description})=>{
     
-                return <Link to={ `/${name}`}>  <CardCategories key={id}
+                return   <CardCategories key={id}
                   title={name}
                   description={description}
                   image={img}
                   id={id}
-                  /></Link>
+                  />
               })
               }
           </div>

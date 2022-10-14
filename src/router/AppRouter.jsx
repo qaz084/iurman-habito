@@ -2,15 +2,20 @@
 import {Routes,Route} from 'react-router-dom';
 import Home from '../Home';
 
-import { ItemListContainer } from '../components';
+import { ItemDetailContainer, ItemListContainer,Cart, Navbar } from '../components';
+
 
 export const AppRouter = () => {
   return (
     <>
+        <Navbar/>
         <Routes>
 
             <Route path="/" element={<Home/>}/>
-            <Route path="/products" element={<ItemListContainer/>}/>
+            <Route path="/product/:id" element={<ItemDetailContainer/>}/>
+            <Route path="/category/:id" element={<ItemListContainer/>}/>
+            <Route path="/cart" element={<Cart/>}/>
+            <Route path="/*" element={<Home/>}/>
 
         </Routes>
     </>

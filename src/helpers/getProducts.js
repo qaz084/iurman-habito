@@ -1,6 +1,6 @@
 export const  getProducts = async()=>{
 
-    const url='./data/productsDetails.json';
+    const url='/data/productsDetails.json';
     const response=await fetch(url);
     const {data}=await response.json();
 
@@ -10,7 +10,8 @@ export const  getProducts = async()=>{
         price:product.price,
         name:product.name,
         img1:product.img1,
-        quantity:product.stock
+        quantity:product.stock,
+        category:product.categories
 
     }));
     return products;
