@@ -9,7 +9,7 @@ export const ItemListContainer = () => {
  const {id} =useParams();
 
     const{isLoading,items}=useFetchItems({id});
-      console.log('ITEMS',id);
+     
    
   return (
     <>

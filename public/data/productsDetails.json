@@ -1,10 +1,10 @@
 {"data":[
    {
     "id": 1,
-    "img1": "../images/products/tanktop_01.png",
-    "img2": "../images/products/tanktop_02.png",
-    "img3": "../images/products/tanktop_03.png",
-    "img4": "../images/products/tanktop_04.png",
+    "img1": "/images/products/tanktop_01.png",
+    "img2": "/images/products/tanktop_02.png",
+    "img3": "/images/products/tanktop_03.png",
+    "img4": "/images/products/tanktop_04.png",
     "CategoryId": 1,
     "categories": "Remeras",
     "price": 2000.00,
@@ -43,7 +43,7 @@
     },
    {
     "id": 3,
-    "img1": "../images/products/tshirt-ejemplo-01.jpg",
+    "img1": "/images/products/tshirt-ejemplo-01.jpg",
     "img2": "../images/products/tshirt-ejemplo-02.jpg",
     "img3": "../images/products/tshirt-ejemplo-03.jpg",
     "img4": "../images/products/tshirt-ejemplo-04.jpg",

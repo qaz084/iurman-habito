@@ -3,7 +3,7 @@ import { getProducts } from "../helpers/getProducts";
 
 export const useFetchItems = ({id}) => {
 
-    console.log('IDDDDD',id);
+  
 const[items, setItems]=useState([]);
 const[isLoading, setIsLoading]=useState(true);
 

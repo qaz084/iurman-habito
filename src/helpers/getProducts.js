@@ -6,10 +6,7 @@ export const  getProducts = async()=>{
 
     const products= data?.map(product=>({
 
-        id:product.id,
-        price:product.price,
-        name:product.name,
-        img1:product.img1,
+        ...product,
         quantity:product.stock,
         category:product.categories
 
