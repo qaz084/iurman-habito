@@ -14,7 +14,7 @@ const[isLoading, setIsLoading]=useState(true);
         const getItems =async()=> {
 
             const newItems =await getProducts();
-            console.log('newitemsssss',newItems);
+          
             setItems(newItems.filter(p => p.category === id));
             setIsLoading(false);
         

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+
 import { useFetchCategories } from "../../../customHooks/useFetchCategories";
 
 import { CardCategories } from "./CardCategories";
@@ -7,10 +7,9 @@ export const Categories = () => {
 
   const {categories}=useFetchCategories();
   
-// console.log(categories[0].id);
   return (
     <>
-          <div className=" grid grid-cols-1 items-center justify-items-center mt-40 sm:mt-10 sm:grid-cols-2  " >
+          <div className=" grid grid-cols-1 items-center justify-items-center mt-20 sm:mt-10 sm:grid-cols-2  " >
                 <h1 className="text-primary ml-4 mb-12 font-bold text-4xl sm:m-auto md:text-4xl lg:text-6xl">Categorias</h1>
             
            

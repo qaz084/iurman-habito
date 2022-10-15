@@ -6,7 +6,8 @@ export const ItemList = ({ItemData}) => {
 
     <>
 
-      <div className="bg-red-500 m-auto  flex flex-column flex-wrap sm:flex-row sm:flex-wrap sm:w-[82vw]">
+      <div className="flex flex-column mt-10 justify-center flex-wrap w-80 m-auto space-y-10
+      sm:flex-row sm:w-[80vw] sm:justify-around sm:space-y-0 sm:gap-10">
 
         {
           ItemData.map((product)=>{

@@ -2,10 +2,9 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import HabitoLogo from '../../images/logo_blanco.svg'
-import HeaderImg1 from '../../images/header/banner_02.png'
-import {CartWidget,Searchbar,UserWidget} from '../../components'
+import {CartWidget,Searchbar,UserWidget} from '..'
 
-export const Navbar = () => {
+export const SecondaryNavbar = () => {
 
   // Seteo el estado para la transparencia del navbar
 
@@ -25,7 +24,7 @@ export const Navbar = () => {
 
   return (
 
-    <header className="grid sm:grid-rows-[minContent_minContent] " >
+    <header className="grid mb-32 sm:grid-rows-[minContent_minContent] " >
 
       <nav className={!navTheme?"nav-static":"nav-scroll"}>
 
@@ -49,13 +48,6 @@ export const Navbar = () => {
         
       </nav>
   
-    <Link to={'/product/detail/Trouser'}>
-
-      <div className="flex items-center overflow-hidden w-fit bg-grey-100">
-         <img  className="hidden sm:inline-block sm:scale-110  sm:mt-40" src={HeaderImg1} alt="Banner Habito HomePage"/>
-      </div>
-    </Link>
-
     </header>
   )
 }

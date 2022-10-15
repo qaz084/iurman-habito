@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState } from "react";
 
 export const CardProductsButtons = ({productQuantity}) => {
    
@@ -25,11 +25,9 @@ export const CardProductsButtons = ({productQuantity}) => {
     }
 
 
-
   return (
-    <div className="flex flex-col h-[32]">
-            <div className="flex flex-row mt-4 mb-3 mx-6 items-center ">
-
+    <div className="flex flex-col flex-none h-28 justify-between">
+            <div className="flex flex-row mt-3 mb-2 mx-6 items-center ">
 
             {/*----------- Add Button--------- */}
 
@@ -51,7 +49,7 @@ export const CardProductsButtons = ({productQuantity}) => {
 
             {/*----------- Add to cart Button--------- */}
 
-                <button className="btn-add-cart">
+                <button className="btn-add-cart self-end">
                         Agregar al carrito
                 </button>
 

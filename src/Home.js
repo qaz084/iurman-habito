@@ -9,14 +9,13 @@ export default function App() {
  
   return (
     < >
-      {/* <Navbar/> */}
+     <Navbar/> 
      
       <main>
       {
         isLoading?<Spinner/>:<SaludoUser greetings={user}/>
       }
        
-      
         <Categories />
        
         <ScrollToTopButton/>
