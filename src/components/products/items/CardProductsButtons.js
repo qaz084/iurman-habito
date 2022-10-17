@@ -27,22 +27,25 @@ export const CardProductsButtons = ({productQuantity}) => {
 
   return (
     <div className="flex flex-col flex-none h-28 justify-between">
-            <div className="flex flex-row mt-3 mb-2 mx-6 items-center ">
+            <div className="flex flex-row mt-3   mx-6 items-center ">
 
-            {/*----------- Add Button--------- */}
+                {/*----------- Subtract Button--------- */}
 
-                    <button onClick={handleMoreProduct} className="btn-add-sub ">
-                     <h2 className="font-extrabold text-xl">+</h2>
-                    </button>
+                <button onClick={handleSubtractProduct}  className=" btn-add-sub disabled">
+                    <h2 className="font-extrabold text-xl  ">-</h2>
+                </button>
+        
 
              {/*----------- Product Counter--------- */}
 
                     <h2 className="w-2/3 m-auto text-center font-bold">{moreProducts}</h2>
 
-             {/*----------- Subtract Button--------- */}
+         
 
-                    <button onClick={handleSubtractProduct}  className=" btn-add-sub disabled">
-                     <h2 className="font-extrabold text-xl  ">-</h2>
+                        {/*----------- Add Button--------- */}
+
+                        <button onClick={handleMoreProduct} className="btn-add-sub ">
+                     <h2 className="font-extrabold text-xl">+</h2>
                     </button>
 
                 </div>

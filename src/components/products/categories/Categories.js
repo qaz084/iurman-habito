@@ -1,11 +1,12 @@
 
 import { useFetchCategories } from "../../../customHooks/useFetchCategories";
+import { Spinner } from "../../Spinner";
 
 import { CardCategories } from "./CardCategories";
 
 export const Categories = () => {
 
-  const {categories}=useFetchCategories();
+  const {categories,isLoading}=useFetchCategories();
   
   return (
     <>
@@ -13,7 +14,8 @@ export const Categories = () => {
                 <h1 className="text-primary ml-4 mb-12 font-bold text-4xl sm:m-auto md:text-4xl lg:text-6xl">Categorias</h1>
             
            
-              {categories.map(({name,id,img,description})=>{
+              {
+               isLoading?<Spinner/>:categories.map(({name,id,img,description})=>{
     
                 return   <CardCategories key={id}
                   title={name}

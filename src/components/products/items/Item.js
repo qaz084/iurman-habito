@@ -8,13 +8,13 @@ export const Item = ({ItemData}) => {
 
   return (
     <>
-      <div className="flex flex-col  group w-52 h-[23rem] shadow-lg rounded-md overflow-hidden">
+      <div className="flex flex-col  group w-52 h-[24rem] shadow-lg rounded-md overflow-hidden">
         <Link to={`/product/detail/${name}`}>
 
           {/* -------Image------------- */}
           <div className="cursor-pointer overflow-hidden relative">
             <img
-              className="duration-700 ease-in hover:scale-110 h-64 w-full"
+              className="duration-700 ease-in hover:scale-110 h-[17rem] w-full"
               src={img1}
               alt="{name}"
             />

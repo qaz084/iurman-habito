@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 export const CardCategories = ({title,description,image,id}) => {
   return (
     <>
-    <Link to={ `/category/${title}`}>
+    <Link to={ `/category/${title}`} >
         <div className="flex flex-col group cursor-pointer mb-4 sm:mb-0 ">
 
           <div className="flex flex-row bg-white duration-500 ease-in ">
