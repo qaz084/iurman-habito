@@ -14,7 +14,7 @@ export const SecondaryRouter = () => {
             <Route path="/category/:id" element={<ItemListContainer/>}/>
             <Route path="/cart" element={<Cart/>}/>
             
-            <Route path="/*" element={<Home/>}/>
+            <Route path="*" element={<Home/>}/>
 
         </Routes>
     </>

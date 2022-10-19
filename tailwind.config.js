@@ -17,6 +17,17 @@ module.exports = {
         'fit-200': 'repeat(auto-fit,minmax(200px,1fr))',
         'min-max-2': 'min-content max-content',
       },
+      keyframes:{
+
+        transitionToCart:{
+
+          '0%':{transform: 'translateX(-100%)'},
+          '100%':{transform: 'translateX(100%)'},
+        },
+      },
+      animation:{
+        'add-To-Cart':'transitionToCart 1s ease-in-out',
+      },
   
     },
   },

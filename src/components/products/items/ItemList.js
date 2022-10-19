@@ -1,6 +1,13 @@
-import { Item } from "./Item"
+import { useContext } from "react";
+import { ContextCart } from "../../../context/CartContext";
+import { Item } from "./Item";
+
 
 export const ItemList = ({ItemData}) => {
+
+  const context = useContext(ContextCart);
+
+  console.log(context);
 
   return (
 

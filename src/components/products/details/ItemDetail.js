@@ -10,6 +10,7 @@ export const ItemDetail = ({ItemDetail}) => {
       <Link className="order-1  mb-5 lg:m-auto lg:mx-20 hover:underline" to={`../../category/${ItemDetail[0].category}`}>
          <h1 className="font-bold text-4xl text-primary  m-auto">{ItemDetail[0].category}</h1>
       </Link>
+      
 {/* Secondary Images */}
       <div className="flex flex-row w-[7rem] mt-4 space-x-3 items-center justify-center order-3 
       lg:order-2 lg:flex-col  lg:self-center lg:h-[95%] lg:overflow-hidden lg:space-x-0 lg:mt-0 lg:w-[7rem] lg:space-y-4 lg:py-4 ">    

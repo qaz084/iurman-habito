@@ -1,18 +1,26 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ContextCart } from "../../../context/CartContext";
+
+
 
 export const CardProductsButtons = ({productQuantity}) => {
-   
+    
+    const productsCounter=1;
+    const {addItemToNavCart,navCart}=useContext(ContextCart);
+    const[stockQuantity,setStockQuantity]=useState(productQuantity-productsCounter);
+
 
  // Counter State------------
-    const productsCounter=1;
+    console.log(stockQuantity);
     
     const [moreProducts, setMoreProducts] = useState(productsCounter);
 
 // Add Function------------
     const handleMoreProduct= () => {
-        if(moreProducts<productQuantity){
+        if(moreProducts<=productQuantity){
 
-            return  setMoreProducts(moreProducts+1);
+          setMoreProducts(moreProducts+1)
+          setStockQuantity(stockQuantity-1)
         }
     }
 
@@ -20,9 +28,27 @@ export const CardProductsButtons = ({productQuantity}) => {
     const handleSubtractProduct= () => {
         if(moreProducts>1){
 
-            return  setMoreProducts(moreProducts-1);
+            setMoreProducts(moreProducts-1);
+            setStockQuantity(stockQuantity+1)
         }
     }
+
+//HANDLER COLOR BUY BUTTON------------
+
+const handlerColor= (e) => {
+
+    const btn= e.currentTarget;
+    console.log(btn);
+    btn.classList.remove('btn-add-cart')
+    btn.classList.add('btn-add-cart-added')
+    btn.innerHTML ="v"
+    
+    setTimeout(() => {
+        btn.classList.remove('btn-add-cart-added')
+        btn.classList.add('btn-add-cart')
+        btn.innerHTML ="Agregar al carrito"
+    }, 1500);
+}
 
 
   return (
@@ -44,7 +70,8 @@ export const CardProductsButtons = ({productQuantity}) => {
 
                         {/*----------- Add Button--------- */}
 
-                        <button onClick={handleMoreProduct} className="btn-add-sub ">
+                        <button onClick={handleMoreProduct} className="btn-add-sub "
+                        disabled={(moreProducts>=productQuantity)||(navCart===productQuantity)}>
                      <h2 className="font-extrabold text-xl">+</h2>
                     </button>
 
@@ -52,7 +79,9 @@ export const CardProductsButtons = ({productQuantity}) => {
 
             {/*----------- Add to cart Button--------- */}
 
-                <button className="btn-add-cart self-end">
+                <button className="btn-add-cart self-end"
+                onClick={()=>addItemToNavCart(productQuantity,moreProducts,stockQuantity)}
+                disabled={productQuantity===navCart}>
                         Agregar al carrito
                 </button>
 

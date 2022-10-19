@@ -1,13 +1,15 @@
-import { useState } from 'react'
+import { useContext,useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import HabitoLogo from '../../images/logo_blanco.svg'
-import {CartWidget,Searchbar,UserWidget} from '..'
+import {CartWidget,Searchbar,UserWidget} from '..';
+import { ContextCart } from '../../context/CartContext'
 
 export const SecondaryNavbar = () => {
 
-  // Seteo el estado para la transparencia del navbar
+  const {navCart}=useContext(ContextCart);
 
+  // Seteo el estado para la transparencia del navbar
   const [navTheme, setNavTheme] = useState(false);
 
     // función que usa el State del nav
@@ -39,8 +41,9 @@ export const SecondaryNavbar = () => {
 
             <UserWidget/>
 
-            <Link to={'/cart'}>
+            <Link to={'/cart'} className="flex items-center justify-center">
              <CartWidget/>
+             <span className="text-white font-bold">{navCart&&navCart}</span>
 
             </Link>
             

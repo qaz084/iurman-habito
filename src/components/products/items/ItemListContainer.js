@@ -26,18 +26,19 @@ window.onresize=winWidth;
    
   return (
     <>
-     <h1 className="m-auto text-center mt-48 font-bold text-primary text-4xl 
-      sm:ml-20 sm:mt-24 sm:text-6xl
-      md:text-left md:ml-32
-      lg:ml-56 ">
-      {id}
+      <h1 className="m-auto text-center mt-48 font-bold text-primary text-4xl 
+        sm:ml-20 sm:mt-24 sm:text-6xl
+        md:text-left md:ml-32
+        lg:ml-56 ">
+        {id}
       </h1>
 
       <div className="" >
         {isLoading?<Spinner/>:<ItemList ItemData={items}/> }
       </div>
-     <h1 className="m-auto text-center mt-10 mb-20 text-2xl font-bold">{windowWidth}</h1>
 
+   
+   {/* Controla el width del viewport para saber si mostrar o no el boton para hacer scroll to Top */}
     {
       windowWidth<700&&<ScrollToTopButton/>
 
