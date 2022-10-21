@@ -1,7 +1,17 @@
+import { useState } from "react";
 import { Link } from "react-router-dom"
+import { useShoppingCart } from "../../../context/CartContext";
 import { CardProductsButtons } from "../items/CardProductsButtons"
 
+
 export const ItemDetail = ({ItemDetail}) => {
+  const {stock}=ItemDetail[0];
+  console.log(ItemDetail);
+  console.log(stock);
+  const {cart}=useShoppingCart();
+  const [myCart,setMyCart]=useState([]);
+
+
   return (
     <>
     <div className="grid grid-cols-1 mt-52 justify-items-center m-auto w-[80vw] overflow-hidden
@@ -40,7 +50,9 @@ export const ItemDetail = ({ItemDetail}) => {
 
         {/* <h3 className="text-xl text-primary mt-4">Stock: {ItemDetail[0].quantity}</h3> */}
 
-        <CardProductsButtons />
+        <CardProductsButtons itemStocks={stock}
+          addToCart={addToCart}
+        />
         
       </div>
     </div>

@@ -1,36 +1,32 @@
-import { useContext, useState } from "react";
-import { ContextCart } from "../../../context/CartContext";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
-
-export const CardProductsButtons = ({productQuantity}) => {
+export const CardProductsButtons = ({itemStocks,countToCart}) => {
     
     const productsCounter=1;
-    const {addItemToNavCart,navCart}=useContext(ContextCart);
-    const[stockQuantity,setStockQuantity]=useState(productQuantity-productsCounter);
+    const[cartCount,setCartCount]=useState(productsCounter);
 
 
  // Counter State------------
-    console.log(stockQuantity);
+   
     
-    const [moreProducts, setMoreProducts] = useState(productsCounter);
 
 // Add Function------------
     const handleMoreProduct= () => {
-        if(moreProducts<=productQuantity){
+        if(cartCount<=itemStocks){
 
-          setMoreProducts(moreProducts+1)
-          setStockQuantity(stockQuantity-1)
+          setCartCount(cartCount+1);
         }
     }
 
 // Subtract Function------------
     const handleSubtractProduct= () => {
-        if(moreProducts>1){
+        if(cartCount<=itemStocks){
 
-            setMoreProducts(moreProducts-1);
-            setStockQuantity(stockQuantity+1)
-        }
+            setCartCount(cartCount-1)
+            
+          }
     }
 
 //HANDLER COLOR BUY BUTTON------------
@@ -57,33 +53,37 @@ const handlerColor= (e) => {
 
                 {/*----------- Subtract Button--------- */}
 
-                <button onClick={handleSubtractProduct}  className=" btn-add-sub disabled">
+                <button onClick={handleSubtractProduct}  className=" btn-add-sub disabled"
+                 disabled={(cartCount===productsCounter)}>
                     <h2 className="font-extrabold text-xl  ">-</h2>
                 </button>
         
 
              {/*----------- Product Counter--------- */}
 
-                    <h2 className="w-2/3 m-auto text-center font-bold">{moreProducts}</h2>
+                    <h2 className="w-2/3 m-auto text-center font-bold">{cartCount}</h2>
 
          
 
                         {/*----------- Add Button--------- */}
 
                         <button onClick={handleMoreProduct} className="btn-add-sub "
-                        disabled={(moreProducts>=productQuantity)||(navCart===productQuantity)}>
+                        disabled={(cartCount>=itemStocks)}>
                      <h2 className="font-extrabold text-xl">+</h2>
                     </button>
 
                 </div>
 
             {/*----------- Add to cart Button--------- */}
+                    <Link to="/cart">
 
                 <button className="btn-add-cart self-end"
-                onClick={()=>addItemToNavCart(productQuantity,moreProducts,stockQuantity)}
-                disabled={productQuantity===navCart}>
+                onClick={()=>countToCart(cartCount)}>
                         Agregar al carrito
                 </button>
+
+                    </Link>
+
 
      </div>
   )
