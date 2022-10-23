@@ -1,36 +1,38 @@
-import { useContext, useState } from 'react'
+import { useContext,useState} from 'react'
 import { Link } from 'react-router-dom'
-
 import HabitoLogo from '../../images/logo_blanco.svg'
-import HeaderImg1 from '../../images/header/banner_02.png'
 import {CartWidget,Searchbar,UserWidget} from '../../components'
 import { ContextCart } from '../../context/CartContext'
-
+import { useChangeNavTheme } from '../../customHooks/useChangeNavTheme'
 
 export const Navbar = () => {
   
-  const {navCart}=useContext(ContextCart);
+  const {cartBag}=useContext(ContextCart);
+  const[isBagEmpty,setIsBagEmpty]=useState(false)
 
-  // Seteo el estado para la transparencia del navbar
-  const [navTheme, setNavTheme] = useState(false);
-
-    // función que usa el State del nav
-  const changeTheme=()=>{
-
-    if(window.scrollY>=100){
-      setNavTheme(true)
-    }else{
-      setNavTheme(false)
-    }
+const handleCartBagMessage=()=> {
+  if(cartBag>0){
+    setIsBagEmpty(false)
+  }else{
+    setIsBagEmpty(true)
   }
 
-  window.addEventListener('scroll', changeTheme)
+}
+
+//Custom Hook que maneja el theme del navbar, segun el scroll
+const navTheme=useChangeNavTheme();
 
   return (
 
     <header className="grid sm:grid-rows-[minContent_minContent] " >
 
+    
+
       <nav className={!navTheme?"nav-static":"nav-scroll"}>
+     
+      <div className={isBagEmpty?"absolute flex items-center justify-center top-full right-0 bg-white w-60 h-20 ":"hidden"}>
+          <h1 className="text-primary font-bold" >El carrito está vacio</h1>
+      </div>
 
 {/* ---------------LOGO-------------- */}
         <Link to={'/'}>
@@ -42,23 +44,23 @@ export const Navbar = () => {
         <div className="hidden sm:flex  sm:items-center sm:space-x-8">
 
             <UserWidget/>
+           
+            <Link to={'/cart'} className="relative flex items-center justify-center"  onClick={handleCartBagMessage}>
 
-            <Link to={'/cart'} className="flex items-center justify-center">
              <CartWidget/>
-             <span className="text-white font-bold">{navCart&&navCart}</span>
 
+             {
+              cartBag>0?
+              <div className="absolute flex items-center justify-center top-3 left-3 w-6 h-6 rounded-full bg-green-400 text-primary font-bold">
+             <span>{cartBag}</span>
+             </div>:
+             null
+             }
             </Link>
             
         </div>
         
       </nav>
-  
-    <Link to={'/product/detail/Trouser'}>
-
-      <div className="flex items-center overflow-hidden w-fit bg-grey-100">
-         <img  className="hidden sm:inline-block sm:scale-110  sm:mt-40" src={HeaderImg1} alt="Banner Habito HomePage"/>
-      </div>
-    </Link>
 
     </header>
   )

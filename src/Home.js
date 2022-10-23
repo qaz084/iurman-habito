@@ -1,31 +1,29 @@
-
-import { Categories,Navbar,SaludoUser,ScrollToTopButton,Footer, Spinner} from './components';
-import { useFetchUsers } from './customHooks';
-
+import {
+  Categories,
+  SaludoUser,
+  ScrollToTopButton,
+  Footer,
+  Spinner,
+  Banner,
+} from "./components";
+import { useFetchUsers } from "./customHooks";
 
 export default function App() {
+  const { user, isLoading } = useFetchUsers();
 
-  const {user,isLoading}=useFetchUsers();
- 
   return (
-    < >
-     <Navbar/> 
-     
+    <>
+      <Banner />
       <main>
-      {
-        isLoading?<Spinner/>:<SaludoUser greetings={user}/>
-      }
-       
+        {isLoading ? <Spinner /> : <SaludoUser greetings={user} />}
+
         <Categories />
-       
-        <ScrollToTopButton/>
+        <ScrollToTopButton />
       </main>
 
       <footer>
-        <Footer/>
+        <Footer />
       </footer>
     </>
   );
 }
-
-

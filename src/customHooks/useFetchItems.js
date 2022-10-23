@@ -17,12 +17,12 @@ const[isLoading, setIsLoading]=useState(true);
           
             setItems(newItems.filter(p => p.category === id));
             setIsLoading(false);
-        
         }
-           //GENERA DELAY DE 2 SEG PARA SIMULAR FALLA DE CONEXIÓN
-           setTimeout(()=>{
-
+        //GENERA DELAY DE 2 SEG PARA SIMULAR FALLA DE CONEXIÓN
+        setTimeout(()=>{
+            
             getItems();
+        
 
         },'2000')
 

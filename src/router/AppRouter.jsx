@@ -1,18 +1,29 @@
 
-import {Routes,Route} from 'react-router-dom';
+import {Routes,Route,Navigate} from 'react-router-dom';
+import { Cart, ItemDetailContainer, ItemListContainer, Navbar } from '../components';
 import Home from '../Home';
-
-import { SecondaryRouter } from './SecondaryRouter';
+import { useShoppingCart } from '../context/CartContext';
 
 
 export const AppRouter = () => {
+
+  const {cart}=useShoppingCart();
   return (
     <>
-     
+     <Navbar/> 
         <Routes>
 
             <Route path="/" element={<Home/>}/>
-            <Route path="/*" element={<SecondaryRouter/>}/>
+          
+            <Route path="/product/detail/:id" element={<ItemDetailContainer/>}/>
+            <Route path="/category/:id" element={<ItemListContainer/>}/>
+
+            {cart.length > 0? <Route path="/cart" element={<Cart/>}/>:<Route  element={<Navigate to="/"/>}/>
+            
+            }
+        
+            <Route path="/*" element={<Home/>}/>
+
           
         </Routes>
     </>
