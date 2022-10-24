@@ -1,10 +1,12 @@
 import { useShoppingCart } from "../../context/CartContext";
+import { CountProductCart } from "./CountProductCart";
+
 
 export const CartItem = ({cart}) => {
     
     const {removeItem}=useShoppingCart()
 
-    // console.log('cart :>> ', cart);
+    console.log('cart :>> ', cart);
 
   return (
     <>
@@ -25,7 +27,11 @@ export const CartItem = ({cart}) => {
 
             <h2 className="text-xl font-bold text-primary ">$ {cart.price}</h2>
             <hr />
-            <div className="sm:mt-5 flex items-center justify-between ">
+            <CountProductCart stock={cart.stock} 
+            item={cart}
+            count={cart.count}
+            />
+            <div className="flex items-center justify-between ">
               <h2 className="text-md text-primary ">cantidad: {cart.count}</h2>
               <h2 className=" text-md text-primary font-bold ">Total: ${cart.price*cart.count}</h2>
             </div>

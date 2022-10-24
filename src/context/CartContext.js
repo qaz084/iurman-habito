@@ -43,6 +43,17 @@ export const CartContext = ({children}) => {
       setCartBag(cartBag-itemFound.count)
 
    };
+   const substractItem=(itemId)=>{
+      const itemFound=cart.find(product=>product.id===itemId);
+     itemFound.count--
+      setCartBag(cartBag-1)
+
+   };
+   const addOneItem=(itemId)=>{
+      const itemFound=cart.find(product=>product.id===itemId);
+     itemFound.count++
+      setCartBag(cartBag+1)
+   };
 
    const clearCart=()=>{
     setCart([]);
@@ -52,7 +63,7 @@ export const CartContext = ({children}) => {
 
 
   return (
-    <ContextCart.Provider value={{addItemToCart,removeItem,isInCart,clearCart,cart,cartBag}}>
+    <ContextCart.Provider value={{addItemToCart,removeItem,isInCart,clearCart,cart,cartBag,substractItem,addOneItem}}>
         {children}
     </ContextCart.Provider>
   )
