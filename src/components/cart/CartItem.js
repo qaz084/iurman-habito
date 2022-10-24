@@ -4,17 +4,14 @@ import { CountProductCart } from "./CountProductCart";
 
 export const CartItem = ({cart}) => {
     
-    const {removeItem}=useShoppingCart()
-
-    console.log('cart :>> ', cart);
+  const {removeItem}=useShoppingCart()
 
   return (
     <>
     <div className="bg-slate-100 w-full p-2 space-x-5 flex flex-nowrap py-5  ">
   
-
         <div className="w-[30%] overflow-hidden ">
-         <img src={cart.img1} alt={cart.name} className="object-cover h-36 w-4/5" />
+         <img src={cart.img1} alt={cart.name} className="object-cover h-36 w-4/5 rounded-md" />
         </div>
 
         <div className="w-64">

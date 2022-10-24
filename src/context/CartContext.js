@@ -8,12 +8,10 @@ export function useShoppingCart() {
 }
 
 export const CartContext = ({children}) => {
+
     const[cart,setCart] = useState([]);
     const [cartBag,setCartBag]=useState(0);
-
-    // const[navCart,setNavCart] = useState(0);
-    // const[totalItemsInCart,setTotalItemsInCart] = useState(0);
-    // const[totalPriceInCart,setTotalPriceInCart] = useState(0);
+    const [totalCost,setTotalCost]=useState(0);
 
    const addItemToCart=(ItemDetail,count)=>{
 
@@ -29,14 +27,9 @@ export const CartContext = ({children}) => {
     } else{
       setCart([...cart, {...ItemDetail,count} ])
     } 
-    
     setCartBag(cartBag+count)
-    
   };
 
-  //  const addItem=(item,quantity)=>{
-
-  //  };
    const removeItem=(itemId)=>{
       const itemFound=cart.find(product=>product.id===itemId);
       setCart(cart.filter(item=>item.id!==itemId))
@@ -57,13 +50,17 @@ export const CartContext = ({children}) => {
 
    const clearCart=()=>{
     setCart([]);
+    setCartBag(0)
    };
 
   const isInCart=(id)=>cart.some(item=>item.id===id)
 
+const totalCartCost=()=>{
+
+}
 
   return (
-    <ContextCart.Provider value={{addItemToCart,removeItem,isInCart,clearCart,cart,cartBag,substractItem,addOneItem}}>
+    <ContextCart.Provider value={{addItemToCart,removeItem,isInCart,clearCart,cart,cartBag,substractItem,addOneItem,totalCartCost}}>
         {children}
     </ContextCart.Provider>
   )
