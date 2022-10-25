@@ -3,14 +3,12 @@ import { useShoppingCart } from "../../context/CartContext";
 
 export const CountProductCart = ({stock,item,count}) => {
 
-   const{addOneItem,cartBag,substractItem,cart}= useShoppingCart();
-
-   console.log('cart :>> ', cart);
+   const{addOneItem,substractItem}= useShoppingCart();
 
     // Counter State------------
     const productsCounter=count;
     const[cartCount,setCartCount]=useState(productsCounter);
-    console.log('cartCount :>> ', cartCount);
+   
 
 // Add Function------------
     const handleMoreProduct= () => {
@@ -48,8 +46,8 @@ const handlerColor= (e) => {
 }
 
   return (
-    <div className="flex flex-col flex-none h-28 justify-between">
-            <div className="flex flex-row mt-10   items-center ">
+    <div className="flex flex-col mt-10 mb-4 ">
+            <div className="flex flex-row">
 
                 {/*----------- Subtract Button--------- */}
 
@@ -68,7 +66,7 @@ const handlerColor= (e) => {
                         disabled={(item.count>=stock)}>
                      <h2 className="font-extrabold text-xl">+</h2>
                     </button>
-                </div>
+            </div>
      </div>
   )
 }

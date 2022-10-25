@@ -17,6 +17,16 @@ export const CartContext = ({children}) => {
 
     if(isInCart(ItemDetail.id)){
 
+      // Metodo más performante:
+      
+ /*      const found= cart.find(item=>
+            item.id===ItemDetail.id
+      );
+      const index= cart.indexOf(found);
+      const aux=[...cart];
+      setCart(aux);
+       */
+
     const modificado=cart.map((producto)=>{
       if(producto.id===ItemDetail.id){
         producto.count+=count;
@@ -26,41 +36,48 @@ export const CartContext = ({children}) => {
      setCart(modificado);
     } else{
       setCart([...cart, {...ItemDetail,count} ])
-    } 
+    } ;
     setCartBag(cartBag+count)
+    setTotalCost(totalCost + ItemDetail.price * count)
+    // console.log('ItemDetail',ItemDetail.price*count )
+    
+   
   };
+ 
 
    const removeItem=(itemId)=>{
       const itemFound=cart.find(product=>product.id===itemId);
       setCart(cart.filter(item=>item.id!==itemId))
       setCartBag(cartBag-itemFound.count)
+      setTotalCost(totalCost - itemFound.price * itemFound.count)
 
    };
    const substractItem=(itemId)=>{
       const itemFound=cart.find(product=>product.id===itemId);
      itemFound.count--
       setCartBag(cartBag-1)
+      setTotalCost(totalCost-itemFound.price)
 
    };
    const addOneItem=(itemId)=>{
       const itemFound=cart.find(product=>product.id===itemId);
      itemFound.count++
       setCartBag(cartBag+1)
+      setTotalCost(totalCost+itemFound.price)
+     
    };
 
    const clearCart=()=>{
     setCart([]);
     setCartBag(0)
+    setTotalCost(0)
    };
 
   const isInCart=(id)=>cart.some(item=>item.id===id)
 
-const totalCartCost=()=>{
-
-}
 
   return (
-    <ContextCart.Provider value={{addItemToCart,removeItem,isInCart,clearCart,cart,cartBag,substractItem,addOneItem,totalCartCost}}>
+    <ContextCart.Provider value={{addItemToCart,removeItem,isInCart,clearCart,cart,cartBag,substractItem,addOneItem,totalCost}}>
         {children}
     </ContextCart.Provider>
   )

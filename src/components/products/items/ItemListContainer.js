@@ -25,7 +25,7 @@ window.onresize=winWidth;
   return (
     <>
       <h1 className="m-auto text-center mt-48 font-bold text-primary text-4xl 
-        sm:ml-20 sm:mt-24 sm:text-6xl
+        sm:ml-20 sm:mt-36 sm:text-6xl
         md:text-left md:ml-32
         lg:ml-56 ">
         {id}

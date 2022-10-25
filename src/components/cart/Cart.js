@@ -4,6 +4,9 @@ import {useNavigate} from "react-router-dom";
 import { BuyBtn } from "./BuyBtn";
 import { CancelBuyBtn } from "./CancelBuyBtn";
 import { CartTtotalCost } from "./CartTtotalCost";
+import { ScrollToTopButton } from "../ScrollToTopButton";
+import { useEffect } from "react";
+import HabitoLogo from '../../images/logo_negro.svg'
 
 export const Cart = () => {
 
@@ -14,24 +17,34 @@ export const Cart = () => {
   //Controla el boton back para navegar a la página previa donde haya estado el usuario.
 
    const handleBack=()=>{
+
+    navigate(-2);
       
-    if(window.history.state && window.history.state.idx > 0) {
+/*     if(window.history.state && window.history.state.idx > 0) {
       navigate(-1);
   } else {
       navigate('/');
-  }
+  } */
 
    }
+   useEffect(()=>{
+      document.body.classList.add('body-cart');
+
+      return()=>{
+        document.body.classList.remove('body-cart');
+      }
+   },[]);
  
   return (
      <>
-       
-      <section className="bg-white m-auto sm:mt-36 sm:grid sm:grid-cols-[40%_60%] justify-items-center sm:w-2/4 sm:mb-20 ">
+      
+      <section className="bg-white rounded-md m-auto sm:p-10 sm:mt-28 sm:grid sm:grid-cols-[70%] justify-center sm:w-2/4 sm:mb-20  ">
 
-        <div className="w-full "> <h1>CART</h1></div>
+         <span onClick={handleBack} className="flex justify-end mb-5 text-xl text-right text-blue-500 hover:underline hover:cursor-pointer">Volver</span>
 
-        <div>
-         <span onClick={handleBack} className="flex justify-end mb-10 text-xl text-blue-500 hover:underline hover:cursor-pointer text-center">Volver</span>
+        <div className="w-full mb-10 ">
+          <img className="m-auto w-40" src={HabitoLogo} alt="Habito, logo negro" />
+        </div>
           {
             cart.map(item=>{
 
@@ -42,7 +55,8 @@ export const Cart = () => {
           <CartTtotalCost/>
           <BuyBtn/>
           <CancelBuyBtn/>
-        </div>
+          <ScrollToTopButton/>
+        
 
       </section>
      </>
