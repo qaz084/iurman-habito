@@ -2,7 +2,6 @@ import { Item } from "./Item";
 
 export const ItemList = ({ItemData}) => {
 
-  
   return (
     <>
       <div className="flex flex-column mt-10 justify-center flex-wrap w-80 m-auto space-y-10

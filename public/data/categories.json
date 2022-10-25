@@ -1,10 +1,10 @@
 {"data":[
  {
   "id": 1,
-  "categories": "Remeras",
+  "name": "Remeras",
   "price": 4700,
   "discount": 40,
-  "name": "Hoddie Infinite  ",
+  "model": "Hoddie Infinite  ",
   "size": [
    "XS",
    "S",
@@ -12,54 +12,54 @@
    "XL"
   ],
   "color": "Red",
-  "longDescription": "     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo           ",
+  "description": "     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo           ",
   "img": "images/products/category_1.jpg"
 
  },
  {
   "id": 2,
-  "categories": "Pantalones",
+  "name": "Pantalones",
   "price": 2800,
   "discount": 10,
-  "name": "Joger solvang",
+  "model": "Joger solvang",
   "size": "M",
   "color": "Grey",
-  "longDescription": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo   ",
+  "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo   ",
   "img": "images/products/category_2.jpg"
   
  },
  {
   "id": 3,
-  "categories": "Camisas",
+  "name": "Camisas",
   "price": 1200,
   "discount": 37,
-  "name": "Camisa",
+  "model": "Camisa",
   "size": "M",
   "color": "Grey",
-  "longDescription": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo",
+  "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo",
   "img": "images/products/category_3.jpg"
 
  },
  {
   "id": 4,
-  "categories": "Shorts",
+  "name": "Shorts",
   "price": 2500,
   "discount": 7,
-  "name": "Short",
+  "model": "Short",
   "size": "M",
   "color": "Grey",
-  "longDescription": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo",
+  "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo",
   "img": "images/products/category_4.jpg"
  },
  {
   "id": 5,
-  "categories": "Buzos",
+  "name": "Buzos",
   "price": 15000,
   "discount": 25,
-  "name": "Hoddie",
+  "model": "Hoddie",
   "size": "M",
   "color": "Grey",
-  "longDescription": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo",
+  "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo",
   "img": "images/products/category_5.jpg"
 
  }

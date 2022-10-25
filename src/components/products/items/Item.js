@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 export const Item = ({ItemData}) => {
   
     const {img1,name,price}=ItemData;
-    console.log('ItemData :>> ', ItemData);
 
   return (
     <>

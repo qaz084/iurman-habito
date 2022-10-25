@@ -1,3 +1,3 @@
-export * from './useFetchCategories';
+export * from './useFetch';
 export * from './useFetchItems';
 export * from './useFetchUsers';

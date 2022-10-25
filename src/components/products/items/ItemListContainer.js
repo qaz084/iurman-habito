@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { useFetchItems } from '../../../customHooks/useFetchItems';
+import { useFetch } from '../../../customHooks/useFetch';
 import { ScrollToTopButton } from '../../ScrollToTopButton';
 import { Spinner } from '../../Spinner';
 import { ItemList } from './ItemList';
@@ -8,8 +8,8 @@ import { ItemList } from './ItemList';
 export const ItemListContainer = () => {
  const {id} =useParams();
 
-const{isLoading,items}=useFetchItems({id});
-console.log('items :>> ', items);
+const{isLoading,dataFetched}=useFetch({id});
+
 // ---Si el width de la pantalla es menor a un valor, va a mostrar el boton scrollUp.Esto es para que se muestre solo en Mobile
 
 const [windowWidth, setWindowWidth] = useState();
@@ -32,7 +32,7 @@ window.onresize=winWidth;
       </h1>
 
       <div className="" >
-        {isLoading?<Spinner/>:<ItemList ItemData={items}/> }
+        {isLoading?<Spinner/>:<ItemList ItemData={dataFetched}/> }
       </div>
 
    {/* Controla el width del viewport para saber si mostrar o no el boton para hacer scroll to Top */}
