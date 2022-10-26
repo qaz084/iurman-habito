@@ -24,7 +24,7 @@
       sm:flex-row  sm:justify-around sm:items-center sm:h-20
     }
     .nav-scroll{
-        @apply fixed z-10 w-screen flex flex-col items-center mb-40 text-black bg-primary duration-500 ease-in opacity-60 shadow-[0_10px_10px_rgba(0,0,0,0.25)]  py-12 
+        @apply fixed z-10  w-screen flex flex-col items-center mb-40 text-black bg-primary duration-500 ease-in opacity-60 shadow-[0_10px_10px_rgba(0,0,0,0.25)]  py-12 
       sm:flex-row  sm:justify-around sm:items-center sm:h-20
     }
     .btn-to-top{

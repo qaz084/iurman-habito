@@ -4,6 +4,7 @@ import HabitoLogo from '../../images/logo_blanco.svg'
 import {CartWidget,Searchbar,UserWidget} from '../../components'
 import { ContextCart } from '../../context/CartContext'
 import { useChangeNavTheme } from '../../customHooks/useChangeNavTheme'
+import { EmptyCartMessage } from './EmptyCartMessage'
 
 export const Navbar = () => {
   
@@ -24,15 +25,13 @@ const navTheme=useChangeNavTheme();
 
   return (
 
-    <header className="grid sm:grid-rows-[minContent_minContent] " >
+    <header className="grid sm:grid-rows-[minContent_minContent] relative" >
 
+    <EmptyCartMessage/>
+
+      <nav className={!navTheme?"nav-static ":" nav-scroll "}>
     
-
-      <nav className={!navTheme?"nav-static":"nav-scroll"}>
      
-      <div className={isBagEmpty?"absolute flex items-center justify-center top-full right-0 bg-white w-60 h-20 ":"hidden"}>
-          <h1 className="text-primary font-bold" >El carrito está vacio</h1>
-      </div>
 
 {/* ---------------LOGO-------------- */}
         <Link to={'/'}>
@@ -41,11 +40,11 @@ const navTheme=useChangeNavTheme();
       
         <Searchbar/>
 
-        <div className="hidden sm:flex  sm:items-center sm:space-x-8">
+        <div className="  hidden sm:flex  sm:items-center sm:space-x-8">
 
             <UserWidget/>
            
-            <Link to={'/cart'} className="relative flex items-center justify-center"  onClick={handleCartBagMessage}>
+            <Link to={'/cart'} className=" relative flex items-center justify-center"  onClick={handleCartBagMessage}>
 
              <CartWidget/>
 

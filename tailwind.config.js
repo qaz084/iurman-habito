@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin')
 module.exports = {
   content: [ "./src/**/*.{js,jsx,ts,tsx}",'./node_modules/tw-elements/dist/js/**/*.js'],
   theme: {
@@ -6,6 +7,13 @@ module.exports = {
       colors:{
         primary:'#272727',
       },
+      plugins: [
+        plugin(function({ addVariant }) {
+          addVariant('not-first', '&:not(:first-child)')
+          addVariant('hocus', ['&:hover', '&:focus'])
+          addVariant('supports-grid', '@supports (display: grid)')
+        })
+      ],
       spacing:{
         
       },
