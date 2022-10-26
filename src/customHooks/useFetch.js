@@ -1,8 +1,7 @@
-import { useState,useEffect, useCallback } from "react";
+import { useState,useEffect } from "react";
 import { getDocsDb } from "../helpers/getDocsDb";
 
 export const useFetch = ({id}) => {
-  console.log(id)
     const [dataFetched, setdataFetched] = useState([]);
     const[isLoading, setIsLoading]=useState(true);
 
@@ -13,16 +12,17 @@ export const useFetch = ({id}) => {
     //     setIsLoading(false)
     
     // }´
-    const getDocsFetch=async()=>{
-
-      const dataDocs=await getDocsDb(id)
-      setdataFetched(dataDocs);
-      console.log(dataDocs)
-      setIsLoading(false)
-      
-    }
-     
+    
     useEffect(() => {
+      
+        const getDocsFetch=async()=>{
+    
+          const dataDocs=await getDocsDb(id)
+          setdataFetched(dataDocs);
+          setIsLoading(false)
+          
+        }
+      
       getDocsFetch();
      
  
@@ -32,7 +32,7 @@ export const useFetch = ({id}) => {
           getDataFetch();
 
         },'2000') */
-    },[useCallback(id)]);
+    },[id]);
   return {
     dataFetched,
     isLoading

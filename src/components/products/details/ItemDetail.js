@@ -3,6 +3,7 @@ import { useShoppingCart } from "../../../context/CartContext";
 import { CardProductsButtons } from "../items/CardProductsButtons"
 
 export const ItemDetail = ({ItemDetail}) => {
+  console.log(ItemDetail)
 
   const {stock}=ItemDetail;
   const {addItemToCart}=useShoppingCart();

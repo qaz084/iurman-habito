@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 export const Item = ({ItemData}) => {
   
-    const {img1,name,price}=ItemData;
+    const {img1,name,price,id}=ItemData;
 
   return (
     <>
       <div className="flex flex-col items-center group w-52 shadow-lg rounded-md overflow-hidden">
-        <Link to={`/product/detail/${name}`} className="w-full ">
+        <Link to={`/product/detail/${id}`} className="w-full ">
 
           {/* -------Image------------- */}
           <div className="cursor-pointer overflow-hidden m-auto ">

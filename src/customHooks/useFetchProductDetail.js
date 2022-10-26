@@ -1,21 +1,32 @@
 import { useState,useEffect } from "react";
-import { getProducts } from "../helpers/getProducts";
+import { db } from "../firebase/firebase";
+import  {getDoc,collection,doc}  from 'firebase/firestore';
+
 
 export const useFetchProductDetail = ({id}) => {
 
 const[productDetail, setProductDetail]=useState([]);
 const[isLoading, setIsLoading]=useState(true);
 
-    useEffect(() => {
+useEffect(() => {
 
-        const getItems =async()=> {
+  const productsCollection=collection(db,'products');
+  const refDoc=doc(productsCollection,id);
+  
+  getDoc(refDoc)
+  .then((result)=>{
+   
+    setProductDetail({
+      ...result.data(),
+      id:result.id,
+    });
+  
+  })
+  .catch((error) => {
+    console.log(error);
+  })
+  .finally(setIsLoading(false));
 
-            const newDetail =await getProducts();
-            setProductDetail(newDetail.filter(p => p.name === id));
-            setIsLoading(false);
-         
-        }
-        getItems();
 
     },[id]);
 

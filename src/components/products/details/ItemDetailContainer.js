@@ -5,14 +5,13 @@ import { ItemDetail } from "./ItemDetail"
 
 export const ItemDetailContainer = () => {
   const {id} =useParams();
+
   const{isLoading,productDetail}=useFetchProductDetail({id});
-
-  const product=productDetail[0];
-
+console.log('productDetail',productDetail)
   return (
     <>
       <div className="mt-32" >
-        {isLoading?<Spinner/>:<ItemDetail ItemDetail={product}/> }
+        {isLoading?<Spinner/>:<ItemDetail ItemDetail={productDetail}/> }
       </div>
 
     </>
