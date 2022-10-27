@@ -1,4 +1,5 @@
 import { createContext,useContext,useState } from "react";
+import { useLocalStorage } from "../customHooks/useLocalStorage";
 
 export const ContextCart = createContext();
 
@@ -8,7 +9,7 @@ export function useShoppingCart() {
 }
 
 export const CartContext = ({children}) => {
-
+    console.log('CHILDREN');
     const[cart,setCart] = useState([]);
     const [cartBag,setCartBag]=useState(0);
     const [totalCost,setTotalCost]=useState(0);

@@ -4,8 +4,8 @@ import { CountProductCart } from "./CountProductCart";
 
 export const CartItem = ({cart}) => {
     
-  const {removeItem,totalCost}=useShoppingCart();
-  console.log('totalCost',totalCost )
+  const {removeItem}=useShoppingCart();
+
 
   return (
     <>
