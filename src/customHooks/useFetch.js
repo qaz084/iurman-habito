@@ -16,11 +16,15 @@ export const useFetch = ({id}) => {
     useEffect(() => {
       
         const getDocsFetch=async()=>{
-    
-          const dataDocs=await getDocsDb(id)
-          setdataFetched(dataDocs);
-          setIsLoading(false)
-          
+            try{
+
+              const dataDocs=await getDocsDb(id)
+              setdataFetched(dataDocs);
+              setIsLoading(false)
+            }
+            catch(e){
+                    console.log('ERROR:',e)
+            }
         }
       
       getDocsFetch();

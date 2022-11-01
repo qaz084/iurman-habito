@@ -21,9 +21,9 @@ export default function App() {
         <ScrollToTopButton />
       </main>
 
-      <footer>
+     
         <Footer />
-      </footer>
+     
     </>
   );
 }

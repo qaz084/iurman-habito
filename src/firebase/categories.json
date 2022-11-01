@@ -1,0 +1,66 @@
+{"categories":[
+ {
+  "id": 1,
+  "name": "Remeras",
+  "price": 4700,
+  "discount": 40,
+  "model": "Hoddie Infinite  ",
+  "size": [
+   "XS",
+   "S",
+   "L",
+   "XL"
+  ],
+  "color": "Red",
+  "description": "     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo           ",
+  "img": "https://firebasestorage.googleapis.com/v0/b/habito-iurman.appspot.com/o/products%2Fcategory_1.jpg?alt=media&token=391f4dcf-c993-4372-aaf5-7f7dc3976382"
+
+ },
+ {
+  "id": 2,
+  "name": "Pantalones",
+  "price": 2800,
+  "discount": 10,
+  "model": "Joger solvang",
+  "size": "M",
+  "color": "Grey",
+  "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo   ",
+  "img": "https://firebasestorage.googleapis.com/v0/b/habito-iurman.appspot.com/o/products%2Fcategory_2.jpg?alt=media&token=fc8dddf6-e053-459b-8117-379f6db12d87"
+  
+ },
+ {
+  "id": 3,
+  "name": "Camisas",
+  "price": 1200,
+  "discount": 37,
+  "model": "Camisa",
+  "size": "M",
+  "color": "Grey",
+  "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo",
+  "img": "https://firebasestorage.googleapis.com/v0/b/habito-iurman.appspot.com/o/products%2Fcategory_3.jpg?alt=media&token=c19a26ae-4910-49c0-8968-d07806bc99a4"
+
+ },
+ {
+  "id": 4,
+  "name": "Shorts",
+  "price": 2500,
+  "discount": 7,
+  "model": "Short",
+  "size": "M",
+  "color": "Grey",
+  "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo",
+  "img": "https://firebasestorage.googleapis.com/v0/b/habito-iurman.appspot.com/o/products%2Fcategory_4.jpg?alt=media&token=8d77801e-d3e0-4c10-b3cd-db15ee4d8b41"
+ },
+ {
+  "id": 5,
+  "name": "Buzos",
+  "price": 15000,
+  "discount": 25,
+  "model": "Hoddie",
+  "size": "M",
+  "color": "Grey",
+  "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo",
+  "img": "https://firebasestorage.googleapis.com/v0/b/habito-iurman.appspot.com/o/products%2Fcategory_5.jpg?alt=media&token=cfc17d62-e2ab-4b08-9632-c49080b56471"
+
+ }
+]}

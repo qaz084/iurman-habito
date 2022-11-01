@@ -8,7 +8,6 @@ import 'tw-elements';
 import { HabitoApp } from './HabitoApp';
 
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

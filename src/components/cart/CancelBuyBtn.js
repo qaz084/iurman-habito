@@ -1,18 +1,13 @@
-import { useShoppingCart } from "../../context/CartContext"
-
+import { useShoppingCart } from "../../context/CartContext";
 
 export const CancelBuyBtn = () => {
-
-  const{clearCart} =useShoppingCart();
+  const { clearCart } = useShoppingCart();
 
   return (
     <>
-    <button
-      className="btn-cancel-cart self-end"
-      onClick={clearCart}
-    >
-      Cancelar compra
-    </button>
-  </>
-  )
-}
+      <button className="btn-cancel-cart self-end" onClick={clearCart}>
+        Cancelar compra
+      </button>
+    </>
+  );
+};

@@ -1,13 +1,7 @@
-
 export const BuyBtn = () => {
   return (
     <>
-      <button
-        className="btn-add-cart self-end"
-        
-      >
-        Finalizar compra
-      </button>
+      <button className="btn-add-cart self-end">Finalizar compra</button>
     </>
   );
-}
+};

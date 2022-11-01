@@ -1,17 +1,19 @@
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useFetchProductDetail } from "../../../customHooks/useFetchProductDetail";
+import { ProductDetailError } from '../../../error/ProductDetailError'
 import { Spinner } from "../../Spinner";
-import { ItemDetail } from "./ItemDetail"
 
 export const ItemDetailContainer = () => {
-  const {id} =useParams();
 
+  const {id} =useParams();
   const{isLoading,productDetail}=useFetchProductDetail({id});
-console.log('productDetail',productDetail)
+
+
   return (
     <>
       <div className="mt-32" >
-        {isLoading?<Spinner/>:<ItemDetail ItemDetail={productDetail}/> }
+        {isLoading?<Spinner/>:<ProductDetailError id={id} dataFetched={productDetail}/> }
       </div>
 
     </>

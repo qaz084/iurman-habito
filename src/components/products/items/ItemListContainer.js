@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useFetch } from '../../../customHooks/useFetch';
+import { ProductCategoryError } from '../../../error/ProductCategoryError'
+
 import { ScrollToTopButton } from '../../ScrollToTopButton';
 import { Spinner } from '../../Spinner';
-import { ItemList } from './ItemList';
 
 export const ItemListContainer = () => {
  const {id} =useParams();
@@ -30,10 +31,13 @@ window.onresize=winWidth;
         lg:ml-56 ">
         {id}
       </h1>
-
+   
       <div className="" >
-        {isLoading?<Spinner/>:<ItemList ItemData={dataFetched}/> }
+        {isLoading?<Spinner/>:<ProductCategoryError id={id}
+          dataFetched={dataFetched}
+        /> }
       </div>
+    
 
    {/* Controla el width del viewport para saber si mostrar o no el boton para hacer scroll to Top */}
     {

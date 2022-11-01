@@ -8,9 +8,8 @@ export const Categories = () => {
   const {id}=useParams();
 
   const {dataFetched,isLoading}=useFetch({id});
-  
- 
 
+  
   return (
     <>
           <div className=" grid grid-cols-1 items-center justify-items-center mt-20 sm:mt-10 sm:grid-cols-2  " >

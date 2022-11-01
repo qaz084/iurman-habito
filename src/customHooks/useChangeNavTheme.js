@@ -2,10 +2,8 @@ import { useState } from "react";
 
 export const useChangeNavTheme = () => {
     const [navTheme, setNavTheme] = useState(false);
-    // Seteo el estado para la transparencia del navbar
-
-
-    // función que usa el State del nav
+  
+    // Segun el scroll hace que el nav sea transparente
     const changeTheme=()=>{
 
         if(window.scrollY>=100){

@@ -3,7 +3,7 @@ import {Routes,Route,Navigate} from 'react-router-dom';
 import { Cart, ItemDetailContainer, ItemListContainer, Navbar } from '../components';
 import Home from '../Home';
 import { useShoppingCart } from '../context/CartContext';
-
+import { UserLogin } from '../components/user/UserLogin';
 
 export const AppRouter = () => {
 
@@ -14,17 +14,19 @@ export const AppRouter = () => {
         <Routes>
 
             <Route path="/" element={<Home/>}/>
+            <Route path="/user" element={<UserLogin/>}/>
           
             <Route path="/product/detail/:id" element={<ItemDetailContainer/>}/>
+    
+            
             <Route path="/category/:id" element={<ItemListContainer/>}/>
-
+          
             {cart.length > 0? <Route path="/cart" element={<Cart/>}/>:<Route  element={<Navigate to="/"/>}/>
             
             }
         
             <Route path="/*" element={<Home/>}/>
 
-          
         </Routes>
     </>
   )

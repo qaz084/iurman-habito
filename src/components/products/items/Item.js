@@ -1,9 +1,7 @@
+import { Link } from "react-router-dom";
 
-import { Link } from 'react-router-dom';
-
-export const Item = ({ItemData}) => {
-  
-    const {img1,name,price,id}=ItemData;
+export const Item = ({ ItemData }) => {
+  const { img1, name, price, id } = ItemData;
 
   return (
     <>
@@ -17,18 +15,15 @@ export const Item = ({ItemData}) => {
               src={img1}
               alt={name}
             />
-
           </div>
-            {/* ------Product Info------------- */}
-           
-              <div className="flex flex-col  text-primary pl-6 bg-white group">
-                <h4>{name}</h4>
-                <h2 className="text-primary font-bold text-2xl">${price}</h2>
-              </div>
-           
+          
+          {/* ------Product Info------------- */}
+          <div className="flex flex-col  text-primary pl-6 bg-white group">
+            <h4>{name}</h4>
+            <h2 className="text-primary font-bold text-2xl">${price}</h2>
+          </div>
         </Link>
-       
       </div>
     </>
   );
-}
+};
