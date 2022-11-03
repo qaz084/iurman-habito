@@ -1,34 +1,36 @@
-import { db } from "../firebase/firebase";
-import  {getDocs,collection}  from 'firebase/firestore';
+// import { db } from "../firebase/firebase";
+// import  {getDocs,collection}  from 'firebase/firestore';
 
-export const getDbData=async()=> {
+// export const getDbData=async()=> {
 
-  const categoryCollection=collection(db,'categories');
-  const productsCollection=collection(db,'products');
+//   const categoryCollection=collection(db,'categories');
+//   const productsCollection=collection(db,'products');
  
 
-  const categories=await getDocs(categoryCollection);
+//   const categories=await getDocs(categoryCollection);
   
-  const products=await getDocs(productsCollection);
+//   const products=await getDocs(productsCollection);
 
-  const dataCategories=categories?.docs.map((category)=>{
+//   const dataCategories=categories?.docs.map((category)=>{
      
-      return{
-        ...category.data()
-      }
-  });
-  const dataProducts=products?.docs.map((product)=>{
+//       return{
+//         ...category.data(),
+//         id: category.id
+//       }
+//   });
+//   const dataProducts=products?.docs.map((product)=>{
      
-      return{
-        ...product.data()
-      }
-  });
+//       return{
+//         ...product.data(),
+//         id: product.id
+//       }
+//   });
 
-  const totalData=[...dataCategories,...dataProducts]
+//   const totalData=[...dataCategories,...dataProducts]
 
-  return {
-    totalData
-}
+//   return {
+//     totalData
+// }
     
-  }
+//   }
   

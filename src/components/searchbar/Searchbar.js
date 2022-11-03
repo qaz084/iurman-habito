@@ -1,20 +1,25 @@
-import { useGetSearchBarData } from "../../helpers/useGetSearchBarData"
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { useFetch } from "../../customHooks"
+import { useGetSearchBarData } from "../../helpers/useGetSearchBarData";
 
 export const Searchbar = () => {
-
-  //  const {info}=useGetSearchBarData();
-
+  
+  // const{info}=useGetSearchBarData()
+ 
+  
   //  const onChangeHandler=(e)=>{
-  //   const value= e.target.value
-  //   // getValue(value)
-      
-  //     //  console.log(filteredProducts);
+    //   const value= e.target.value
+    //   // getValue(value)
     
-  //  }
-// useEffect(() => {
-//   onChangeHandler()
+    //     //  console.log(filteredProducts);
+    
+    //  }
+    useEffect(() => {
+ 
+   
 
-// }, [searchValue]);
+ }, []);
 
   return (
     <>

@@ -1,17 +1,25 @@
 import { useState } from "react";
 import { useShoppingCart } from "../../context/CartContext";
+import { useLocalStorage } from "../../customHooks/useLocalStorage";
 
-export const CountProductCart = ({ stock, item, count }) => {
-  const { addOneItem, substractItem } = useShoppingCart();
+export const CountProductCart = ({ stock, item }) => {
+
+  
+  
+  const { addOneItem, substractItem,cartCount } = useShoppingCart();
+  const [itemCount, setItemCount] = useLocalStorage('itemCount',0)
+  
+
+  const cartStoraged=window.localStorage.getItem('cart');
+    console.log(JSON.parse(cartStoraged))
+    console.log('item',item)
 
 
-  const productsCounter = count;
-  const [cartCount, setCartCount] = useState(productsCounter);
   // Add Function------------
   const handleMoreProduct = () => {
     if (item.count <= stock) {
-     
-      addOneItem(item.id);
+      
+       addOneItem(item.id);
     }
   };
 

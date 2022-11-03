@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect,useState } from 'react';
+
 import { useParams } from 'react-router-dom';
 import { useFetch } from '../../../customHooks/useFetch';
 import { ProductCategoryError } from '../../../error/ProductCategoryError'
@@ -9,19 +10,24 @@ import { Spinner } from '../../Spinner';
 export const ItemListContainer = () => {
  const {id} =useParams();
 
-const{isLoading,dataFetched}=useFetch({id});
+ const{isLoading,dataFetched='test'}=useFetch({id});
 
 // ---Si el width de la pantalla es menor a un valor, va a mostrar el boton scrollUp.Esto es para que se muestre solo en Mobile
 
 const [windowWidth, setWindowWidth] = useState();
 
-const winWidth=()=>{
-  const width=window.innerWidth;
-  setWindowWidth(width);
-}
 
-window.onload=winWidth;
-window.onresize=winWidth;
+useEffect(()=>{
+  const winWidth=()=>{
+    const width=window.innerWidth;
+    setWindowWidth(width);
+  }
+  
+  window.onload=winWidth;
+  window.onresize=winWidth;
+console.log('cambia el width');
+ 
+},[windowWidth])
 
   return (
     <>

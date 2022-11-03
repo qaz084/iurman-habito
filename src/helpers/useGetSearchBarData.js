@@ -5,11 +5,10 @@ import { getDbData } from "./getDbData";
 export const useGetSearchBarData = () => {
   
   const [info, setInfo] = useState([]);
+ 
   // const [targetValue, setTargetValue] = useState([]);
   // const [filteredProducts, setFilteredProducts] = useState([]);
-  
-  
-  
+
   // const newInfo=[...info]
   
   //   const getValue = (value) => {
@@ -23,16 +22,11 @@ export const useGetSearchBarData = () => {
       const newData =await getDbData()
       setInfo(newData)
     }
- getDbDataFetched();
+    getDbDataFetched();
+    
 // getValue();
 
-  })
+  },[info])
+  return info
 
-   
-  return {
-    info
-   
-   
-  }
-  
 }
