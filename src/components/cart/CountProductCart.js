@@ -1,40 +1,24 @@
-import { useState } from "react";
 import { useShoppingCart } from "../../context/CartContext";
-import { useLocalStorage } from "../../customHooks/useLocalStorage";
 
 export const CountProductCart = ({ stock, item }) => {
-
-  
-  
-  const { addOneItem, substractItem,cartCount } = useShoppingCart();
-  const [itemCount, setItemCount] = useLocalStorage('itemCount',0)
-  
-
-  const cartStoraged=window.localStorage.getItem('cart');
-    console.log(JSON.parse(cartStoraged))
-    console.log('item',item)
-
+  const { addItemToCart } = useShoppingCart();
 
   // Add Function------------
   const handleMoreProduct = () => {
     if (item.count <= stock) {
-      
-       addOneItem(item.id);
+      addItemToCart(item, 1);
     }
   };
-
   // Subtract Function------------
   const handleSubtractProduct = () => {
     if (item.count <= stock) {
-     
-      substractItem(item.id);
+      addItemToCart(item, -1);
     }
   };
 
   return (
     <div className="flex flex-col mt-10 mb-4 ">
       <div className="flex flex-row">
-
         {/*----------- Subtract Button--------- */}
         <button
           onClick={handleSubtractProduct}

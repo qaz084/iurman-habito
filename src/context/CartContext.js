@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext } from "react";
 import { useLocalStorage } from "../customHooks/useLocalStorage";
 
 export const ContextCart = createContext();
@@ -9,10 +9,9 @@ export function useShoppingCart() {
 }
 
 export const CartContext = ({ children }) => {
-  const [cart, setCart] = useLocalStorage('cart',[]);
-  const [cartBag, setCartBag] =useLocalStorage('cartBag',0);
-  const [totalCost, setTotalCost] =useLocalStorage('TotalCost',0);
-  const [cartCount, setCartCount] = useLocalStorage('productCount',0)
+  const [cart, setCart] = useLocalStorage("cart", []);
+  const [cartBag, setCartBag] = useLocalStorage("cartBag", 0);
+  const [totalCost, setTotalCost] = useLocalStorage("TotalCost", 0);
 
   const addItemToCart = (ItemDetail, count) => {
     if (isInCart(ItemDetail.id)) {
@@ -23,13 +22,11 @@ export const CartContext = ({ children }) => {
         return producto;
       });
       setCart(modificado);
-      setCartCount(modificado)
     } else {
       setCart([...cart, { ...ItemDetail, count }]);
     }
     setCartBag(cartBag + count);
     setTotalCost(totalCost + ItemDetail.price * count);
-    setCartCount(cartCount+count);
   };
 
   const removeItem = (itemId) => {
@@ -38,26 +35,11 @@ export const CartContext = ({ children }) => {
     setCartBag(cartBag - itemFound.count);
     setTotalCost(totalCost - itemFound.price * itemFound.count);
   };
-  const substractItem = (itemId) => {
-    const itemFound = cart.find((product) => product.id === itemId);
-    itemFound.count--;
-    setCartBag(cartBag - 1);
-    setTotalCost(totalCost - itemFound.price);
-    setCartCount(cartCount-1)
-  };
-  const addOneItem = (itemId) => {
-    const itemFound = cart.find((product) => product.id === itemId);
-    itemFound.count++;
-    setCartBag(cartBag + 1);
-    setTotalCost(totalCost + itemFound.price);
-    setCartCount(cartCount+1)
-  };
 
   const clearCart = () => {
     setCart([]);
     setCartBag(0);
     setTotalCost(0);
-    setCartCount(0)
   };
 
   const isInCart = (id) => cart.some((item) => item.id === id);
@@ -71,9 +53,6 @@ export const CartContext = ({ children }) => {
         clearCart,
         cart,
         cartBag,
-        cartCount,
-        substractItem,
-        addOneItem,
         totalCost,
       }}
     >

@@ -7,7 +7,7 @@ import { CardCategories } from "./CardCategories";
 export const Categories = () => {
   const {id}=useParams();
 
-   const {dataFetched='test',isLoading}=useFetch({id});
+   const {dataFetched,isLoading}=useFetch({id});
 
   return (
     <>

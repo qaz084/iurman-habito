@@ -7,7 +7,7 @@ import { Spinner } from "../../Spinner";
 export const ItemDetailContainer = () => {
 
   const {id} =useParams();
-  const{isLoading,productDetail='test'}=useFetchProductDetail({id});
+  const{isLoading,productDetail}=useFetchProductDetail({id});
 
   return (
     <>
