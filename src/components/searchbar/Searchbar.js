@@ -15,11 +15,11 @@ export const Searchbar = () => {
     //     //  console.log(filteredProducts);
     
     //  }
-    useEffect(() => {
+//     useEffect(() => {
  
    
 
- }, []);
+//  }, []);
 
   return (
     <>

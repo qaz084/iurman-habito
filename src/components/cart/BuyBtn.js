@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
 
-export const BuyBtn = () => {
+export const BuyBtn = ({handleBuy}) => {
   return (
     <>
-    <Link to="">
+    <Link to='../user/register'>
 
       <button className="btn-add-cart self-end">Finalizar compra</button>
-
     </Link>
     </>
   );

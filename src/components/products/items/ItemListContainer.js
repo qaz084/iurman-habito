@@ -25,8 +25,7 @@ useEffect(()=>{
   
   window.onload=winWidth;
   window.onresize=winWidth;
-console.log('cambia el width');
- 
+
 },[windowWidth])
 
   return (

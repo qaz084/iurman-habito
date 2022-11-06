@@ -1,4 +1,3 @@
-
 import { db } from "../firebase/firebase";
 import { getDocs, collection, query, where } from "firebase/firestore";
 
@@ -16,8 +15,5 @@ export const getDocsDb = async (id) => {
     };
   });
 
-
-
   return products;
-  
 };

@@ -22,7 +22,7 @@ export const CardProductsButtons = ({ itemStocks, countToCart }) => {
 
   const handlerColor = (e) => {
     const btn = e.currentTarget;
-    console.log(btn);
+   
     btn.classList.remove("btn-add-cart");
     btn.classList.add("btn-add-cart-added");
     btn.innerHTML = "v";
