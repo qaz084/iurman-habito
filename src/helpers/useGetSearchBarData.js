@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { getDbData } from "./getDbData";
 
 
 export const useGetSearchBarData = () => {
@@ -19,8 +18,8 @@ export const useGetSearchBarData = () => {
       
       const getDbDataFetched=async()=>{
         
-      const newData =await getDbData()
-      setInfo(newData)
+
+      
     }
     getDbDataFetched();
     
