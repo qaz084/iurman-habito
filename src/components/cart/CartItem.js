@@ -2,7 +2,7 @@ import { useShoppingCart } from "../../context/CartContext";
 import { CountProductCart } from "./CountProductCart";
 
 export const CartItem = ({cart }) => {
-  const { removeItem,} = useShoppingCart();
+  const {removeItem} = useShoppingCart();
   return (
     <>
       <div className="bg-slate-100 w-full p-2 rounded-t-md flex flex-wrap py-5 relative border-b-2 border-primary">

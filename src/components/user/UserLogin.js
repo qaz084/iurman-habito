@@ -1,24 +1,40 @@
 import { useState } from "react";
+import { ContextCart, useShoppingCart } from "../../context/CartContext";
 import { useForm } from "../../customHooks/useForm";
 import { sendOrder } from "../../helpers/sendOrder";
 import { InputRegister } from "./InputRegister";
+import { OrderIdMsg } from "./OrderIdMsg";
 
 export const UserLogin = () => {
  
  
-  const [orderId, setOrderId] = useState('')
-  const {onInputChange,name,email,phone} = useForm({name:'',email:'',phone:''})
+  const [orderId='pendiente', setOrderId] = useState('');
+  const {onInputChange,name,email,phone} = useForm({name:'',email:'',phone:''});
+
+  const {cart,totalCost}=useShoppingCart();
+
+  const sendInformation=()=>{
+   
+    sendOrder(name,email,phone,cart,totalCost)
+    .then(response=>{
+       
+      setOrderId(response);
+    })
+  }
 
   const handleBuy=(e)=>{
-    const idOrder= sendOrder(name,email,phone);
     e.preventDefault();
-   setOrderId(idOrder);
-   console.log('ORDERID:',orderId)
+     sendInformation();
   }
+
 //MOSTRAR MENSAJE GRACIAS POR TU COMPRA Y LUEGO TU ID DE COMPRA ES:
 //GUARDAR ORDEN ID EN LOCALSTORAGE,,,SI HAY MOSTRAR WIDGET USUARIO
   return (
     <>
+    {
+    orderId&&
+    <OrderIdMsg orderId={orderId}/>
+    }
     <div className="flex  items-center justify-center w-screen h-screen ">
 
         <div className="grid grid-cols-2 gap-10 shadow-2xl rounded-lg overflow-hidden m-auto mt-40  mb-20 w-4/5 h-3/4 ">

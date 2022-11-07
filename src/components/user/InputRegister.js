@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
-import { useForm } from "../../customHooks/useForm";
-import { useFormRegister } from "../../customHooks/useFormRegister";
+
 import { validateUserRegister } from "../../helpers/validateUserRegister";
 
 export const InputRegister = ({name,email,phone,onInputChange}) => {

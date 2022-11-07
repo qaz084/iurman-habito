@@ -6,25 +6,34 @@ import {
   doc,
   updateDoc,
 } from "firebase/firestore";
-import { useForm } from "../customHooks/useForm";
 
-export const sendOrder = async (name,email,phone) => {
+export const sendOrder = async (name,email,phone,cart,totalCost) => {
+
+ const items=cart.map(item =>{
+
+  const obj= {
+    name:item.name,
+    quantity:item.count,
+    price:item.price
+    };
+    return obj;
+  })
 
   const db = getFirestore();
   const ordersCollection = collection(db, "orders");
 
-   name&&console.log('INPUTS',name);
-
-  // const{name,email,phone} =useForm()
-
   const order = {
     buyer: {name:name,email:email, phone:phone,},
-    items: [{ name: "Bici", price: 41200 }],
-    total: 100,
+    items: items,
+    total: totalCost,
     date: serverTimestamp(),
   };
+  try{
 
-  const orderResult = await addDoc(ordersCollection, order);
-
-  return orderResult?.id;
+    const orderResult = await addDoc(ordersCollection, order);
+    console.log(orderResult.id)
+    return orderResult.id;
+  }catch(e){
+    console.log('Error en Order Id:',e)
+  }
 };

@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useShoppingCart } from "../../context/CartContext";
-import { CartItem } from "./CartItem";
-import { BuyBtn } from "./BuyBtn";
-import { CancelBuyBtn } from "./CancelBuyBtn";
-import { CartTtotalCost } from "./CartTtotalCost";
+import { CartItem,BuyBtn,CancelBuyBtn,CartTtotalCost } from "./";
 import { ScrollToTopButton } from "../ScrollToTopButton";
 import HabitoLogo from "../../images/logo_negro.svg";
 
