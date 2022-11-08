@@ -12,13 +12,17 @@ import { User } from "../components/user/User";
 
 export const AppRouter = () => {
   const { cart } = useShoppingCart();
+
   return (
     <>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
 
-        <Route path="user" element={<User />} />
+      
+        <Route path="/user" element={<User />}/>
+
+
         <Route path="user/register" element={<UserLogin />} />
 
         <Route path="/product/detail/:id" element={<ItemDetailContainer />} />

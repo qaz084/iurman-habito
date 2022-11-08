@@ -1,4 +1,5 @@
 import { createContext,useContext } from "react";
+import { useLocalStorage } from "../customHooks/useLocalStorage";
 
 export const ContextUser=createContext();
 
@@ -7,8 +8,15 @@ export const useUserContext=()=>{
 }
 
 export const UserContext = ({children}) => {
+
+  const setUserInStorage=(key)=>{
+    // useLocalStorage(key)
+
+  }
   return (
-    <ContextUser.Provider value={'null'}>
+    <ContextUser.Provider value={{
+    setUserInStorage
+    }}>
         {children}
     </ContextUser.Provider>
   )
