@@ -19,7 +19,9 @@ export const AppRouter = () => {
       <Routes>
         <Route path="/" element={<Home />} />
 
-      
+      {
+        
+      }
         <Route path="/user" element={<User />}/>
 
 

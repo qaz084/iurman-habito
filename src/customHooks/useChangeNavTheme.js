@@ -4,10 +4,7 @@ import { useState } from "react";
 export const useChangeNavTheme = () => {
   const [navTheme, setNavTheme] = useState(false);
 
-
-
-  useEffect(()=>{
-    
+  useEffect(() => {
     // Segun el scroll hace que el nav sea transparente
     const changeTheme = () => {
       if (window.scrollY >= 100) {
@@ -17,7 +14,7 @@ export const useChangeNavTheme = () => {
       }
     };
     window.addEventListener("scroll", changeTheme);
-  },[navTheme])
+  }, [navTheme]);
 
   return navTheme;
 };

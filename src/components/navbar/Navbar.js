@@ -74,11 +74,7 @@ export const Navbar = () => {
         <Searchbar />
 
         <div className="  hidden sm:flex  sm:items-center sm:space-x-8">
-{/* 
-        {
-          storage&&<Navigate to='/user'/>
-          
-        } */}
+
 
         <Link onClick={handleUserBagMessage}>
          <UserWidget  />

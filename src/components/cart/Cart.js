@@ -1,21 +1,12 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { useShoppingCart } from "../../context/CartContext";
-import { CartItem,BuyBtn,CancelBuyBtn,CartTtotalCost } from "./";
+import { CartItem, BuyBtn, CancelBuyBtn, CartTtotalCost } from "./";
 import { ScrollToTopButton } from "../ScrollToTopButton";
 import HabitoLogo from "../../images/logo_negro.svg";
 
 export const Cart = () => {
-  const navigate = useNavigate();
-
   const { cart } = useShoppingCart();
   const [windowWidth, setWindowWidth] = useState(0);
-
-  //Controla el boton back para navegar a la página previa donde haya estado el usuario.
-
-  const handleBack = () => {
-    navigate(-2);
-  };
 
   const changeBackgroundColor = () => {
     const widthBreak = 640;
@@ -39,7 +30,7 @@ export const Cart = () => {
 
   return (
     <>
-      <section className="bg-red-500 rounded-md mt-48 mx-5 m-auto p-2 sm:m-auto sm:bg-white sm:p-10 sm:mt-28 sm:grid sm:grid-cols-[70%] justify-center sm:w-3/4 sm:mb-20  ">
+      <section className=" rounded-md mt-48 mx-5 m-auto p-2 justify-center md:m-auto sm:bg-white md:p-10 md:mt-28 md:grid md:grid-cols-[70%]  md:w-2/4 md:mb-20  ">
         <div className="w-full mb-10 ">
           <img
             className="m-auto w-40"
