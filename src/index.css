@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer components{
+
+    .close-menu{
+        @apply hidden
+    }
     .body-cart{
         @apply bg-slate-200
     }

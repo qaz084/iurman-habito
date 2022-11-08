@@ -6,11 +6,14 @@ import { ContextCart } from "../../context/CartContext";
 import { useChangeNavTheme } from "../../customHooks/useChangeNavTheme";
 import { EmptyCartMessage } from "./EmptyCartMessage";
 import { PopUpMenu } from "../user/PopUpMenu";
+import { useLocalStorage } from "../../customHooks/useLocalStorage";
 
 export const Navbar = () => {
   const { cartBag } = useContext(ContextCart);
   const [isBagEmpty, setIsBagEmpty] = useState(false);
   const [userLogged, setUserLogged] = useState(false);
+  const[storedValue]=useLocalStorage('user');
+
 
   const handleCartBagMessage = () => {
     if (cartBag > 0) {
@@ -50,9 +53,13 @@ export const Navbar = () => {
         <Searchbar />
 
         <div className="  hidden sm:flex  sm:items-center sm:space-x-8">
+
+          {storedValue&&
           <Link to={"/user"} onClick={handlePopUpMenu}>
             <UserWidget />
           </Link>
+          }
+
 
           <Link
             to={"/cart"}
