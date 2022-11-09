@@ -1,42 +1,38 @@
-import { useContext, useEffect, useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import HabitoLogo from "../../images/logo_blanco.svg";
-import { CartWidget, Searchbar, UserWidget } from "../../components";
+import { CartWidget, UserWidget } from "../../components";
 import { ContextCart } from "../../context/CartContext";
 import { useChangeNavTheme } from "../../customHooks/useChangeNavTheme";
 import { EmptyCartMessage } from "./EmptyCartMessage";
-import { PopUpMenu } from "../user/PopUpMenu";
-import { useLocalStorage } from "../../customHooks/useLocalStorage";
-import { useCheckStorage } from "../../customHooks/useCheckStorage";
 import { EmptyUserMessage } from "./EmptyUserMessage";
+import { useFetch } from "../../customHooks";
+import { Spinner } from "../../components/Spinner";
+
 
 export const Navbar = () => {
   const { cartBag } = useContext(ContextCart);
   const [isBagEmpty, setIsBagEmpty] = useState(false);
-  const [storage, setStorage] = useState('');
+  const [, setStorage] = useState("");
   const [userVisible, setUserVisible] = useState(false);
-
-
+  const { id } = useParams();
+  const { dataFetched, isLoading } = useFetch({ id });
 
   const handleUserBagMessage = () => {
-   
-   const storageData= JSON.parse(localStorage.getItem('user'));
-  //  console.log('storagedata',storageData)
-  if(storageData){
-    setStorage(storageData)
-    
-    setUserVisible(false);
-    window.location.replace('/user')
-    
-  } else{
-    setUserVisible(true)
-    setTimeout(() => {
-      setUserVisible(false);
-    }, 2000);
-  }
+    const storageData = JSON.parse(localStorage.getItem("user"));
 
+    if (storageData) {
+      setStorage(storageData);
+      setUserVisible(false);
+      window.location.replace("/user");
+    } else {
+      setUserVisible(true);
+      setTimeout(() => {
+        setUserVisible(false);
+      }, 2000);
+    }
   };
-  
+
   const handleCartBagMessage = () => {
     if (cartBag > 0) {
       setIsBagEmpty(false);
@@ -47,21 +43,17 @@ export const Navbar = () => {
       }, 2000);
     }
   };
-  
+
   //Custom Hook que maneja el theme del navbar, segun el scroll
   const navTheme = useChangeNavTheme();
-  
-
 
   return (
     <header className="grid sm:grid-rows-[minContent_minContent] relative">
       <EmptyCartMessage isBagEmpty={isBagEmpty} />
 
-      <EmptyUserMessage data={userVisible}/>
+      <EmptyUserMessage data={userVisible} />
 
       <nav className={!navTheme ? "nav-static " : " nav-scroll "}>
-      
-
         {/* ---------------LOGO-------------- */}
         <Link to={"/"}>
           <img
@@ -71,16 +63,23 @@ export const Navbar = () => {
           />
         </Link>
 
-        <Searchbar />
+        {
+          isLoading?<Spinner/>
+          :<ul className="flex text-white space-x-10">{ dataFetched.map(dato=>(
+
+          <Link to={`/category/${dato.name}`} > <li className="text-white hover:underline">{dato.name}</li>
+</Link>  
+          ))
+
+           } </ul>
+          }
+        
 
         <div className="  hidden sm:flex  sm:items-center sm:space-x-8">
+          <Link onClick={handleUserBagMessage}>
+            <UserWidget />
+          </Link>
 
-
-        <Link onClick={handleUserBagMessage}>
-         <UserWidget  />
-         </Link>
-        
-          
           <Link
             to={"/cart"}
             className=" relative flex items-center justify-center"
