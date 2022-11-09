@@ -89,7 +89,7 @@ export const User = () => {
             </button>
           </div>
 
-          <button onClick={handleSearchById} className="bg-green-300 ">
+          <button onClick={handleSearchById} className="btn-sm-acept">
             Aceptar
           </button>
 

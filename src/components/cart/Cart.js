@@ -30,7 +30,7 @@ export const Cart = () => {
 
   return (
     <>
-      <section className=" rounded-md mt-48 mx-5 m-auto p-2 justify-center md:m-auto sm:bg-white md:p-10 md:mt-28 md:grid md:grid-cols-[70%]  md:w-2/4 md:mb-20  ">
+      <section className=" rounded-md mt-48 mx-4 m-auto p-2 justify-center md:m-auto sm:bg-white md:p-10 md:mt-28 md:grid md:grid-cols-[70%]  md:w-2/4 md:mb-20  ">
         <div className="w-full mb-10 ">
           <img
             className="m-auto w-40"

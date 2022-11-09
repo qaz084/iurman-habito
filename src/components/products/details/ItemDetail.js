@@ -17,7 +17,7 @@ export const ItemDetail = ({ ItemDetail }) => {
      lg:grid-cols-[min-content_min-content_1fr_1fr] lg:gap-4 lg:mt-20  lg:w-[90%] lg:justify-items-center lg:content-center lg:mb-10 xl:w-[80%]  "
       >
         <Link
-          className="order-1  mb-5 lg:m-auto lg:mx-20 hover:underline"
+          className="order-1  mb- lg:m-auto lg:mx-20 hover:underline"
           to={`../../category/${ItemDetail.category}`}
         >
           <h1 className="font-bold text-4xl text-primary  m-auto">
@@ -27,7 +27,7 @@ export const ItemDetail = ({ ItemDetail }) => {
 
         {/* Secondary Images */}
         <div
-          className="flex flex-row w-[7rem] mt-4 space-x-3 items-center justify-center order-3 
+          className="flex flex-row w-[7rem]  space-x-3 items-center justify-center order-3 
       lg:order-2 lg:flex-col  lg:overflow-hidden lg:space-x-0 lg:mt-0  lg:space-y-4 lg:py-4 "
         >
           <img
@@ -51,11 +51,11 @@ export const ItemDetail = ({ ItemDetail }) => {
 
         {/* Main Image */}
         <div
-          className="w-80 h-[33rem] order-2 overflow-hidden m-auto 
-      lg:order-3  lg:flex lg:w-full"
+          className="w-80 h-[24rem] mb-4 rounded-xl order-2 overflow-hidden m-auto md:m-auto md:mb-4 lg:m-auto
+      lg:order-3  lg:flex lg:h-full lg:w-full"
         >
           <img
-            className="rounded-xl object-cover  w-full"
+            className=" object-cover h-fit md:h-full w-full"
             src={ItemDetail.img1}
             alt={ItemDetail.name}
           />
