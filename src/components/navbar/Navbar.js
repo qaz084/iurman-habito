@@ -23,7 +23,7 @@ export const Navbar = () => {
     if (storageData) {
       setStorage(storageData);
       setUserVisible(false);
-      window.location.replace("/user");
+      window.location.replace("./user");
     } else {
       setUserVisible(true);
       setTimeout(() => {
@@ -66,7 +66,7 @@ export const Navbar = () => {
           isLoading?<Spinner/>
           :<ul className="flex text-white space-x-10">{ dataFetched.map(dato=>(
 
-          <Link to={`/category/${dato.name}`} > <li className="text-white hover:underline">{dato.name}</li>
+          <Link to={`/category/${dato.name}`} key={dato.name}> <li className="text-white hover:underline">{dato.name}</li>
 </Link>  
           ))
 
