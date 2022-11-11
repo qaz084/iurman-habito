@@ -18,21 +18,7 @@ export const CardProductsButtons = ({ itemStocks, countToCart }) => {
     }
   };
 
-  //HANDLER COLOR BUY BUTTON------------
 
-  const handlerColor = (e) => {
-    const btn = e.currentTarget;
-   
-    btn.classList.remove("btn-add-cart");
-    btn.classList.add("btn-add-cart-added");
-    btn.innerHTML = "v";
-
-    setTimeout(() => {
-      btn.classList.remove("btn-add-cart-added");
-      btn.classList.add("btn-add-cart");
-      btn.innerHTML = "Agregar al carrito";
-    }, 1500);
-  };
 
   return (
     <div className="flex flex-col flex-none h-28 justify-between">

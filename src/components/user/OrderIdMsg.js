@@ -10,8 +10,6 @@ export const OrderIdMsg = ({ orderId }) => {
   const handleCopyToClipboard = (e) => {
     e.preventDefault();
     setIdState(copyToClipboard(orderId));
-
-    console.log("ESTADO DEL ID:", idState);
   };
 
   const closeMenu = (e) => {

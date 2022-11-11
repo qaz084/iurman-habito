@@ -3,8 +3,6 @@ import {
   collection,
   getFirestore,
   serverTimestamp,
-  doc,
-  updateDoc,
 } from "firebase/firestore";
 
 export const sendOrder = async (name,email,phone,cart,totalCost) => {
@@ -29,9 +27,7 @@ export const sendOrder = async (name,email,phone,cart,totalCost) => {
     date: serverTimestamp(),
   };
   try{
-
     const orderResult = await addDoc(ordersCollection, order);
-    console.log(orderResult.id)
     return orderResult.id;
   }catch(e){
     console.log('Error en Order Id:',e)

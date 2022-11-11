@@ -40,9 +40,6 @@ export const User = () => {
       total && setTotal(total);
       items && setItems(items);
 
-      console.log("DATABUYER", dataBuyer);
-      console.log("TOTAL", total);
-      console.log("ITEMS", items);
       return { items, total };
     };
     handleData();
