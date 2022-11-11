@@ -47,7 +47,7 @@ export const User = () => {
 
   return (
     <>
-       {logOut && <Navigate to="/" />} 
+       {/* {logOut && <Navigate to="/" />}  */}
       <div className="w-screen h-screen  flex items-center justify-center">
         <div className="w-2/4 mt-20 bg-white p-10 rounded-md shadow-2xl">
           <div className="text-2xl mb-5 text-primary">
