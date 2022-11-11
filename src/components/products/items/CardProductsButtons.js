@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export const CardProductsButtons = ({ itemStocks, countToCart }) => {
-    
   const productsCounter = 1;
   const [cartCount, setCartCount] = useState(productsCounter);
 
@@ -16,22 +15,6 @@ export const CardProductsButtons = ({ itemStocks, countToCart }) => {
     if (cartCount <= itemStocks) {
       setCartCount(cartCount - 1);
     }
-  };
-
-  //HANDLER COLOR BUY BUTTON------------
-
-  const handlerColor = (e) => {
-    const btn = e.currentTarget;
-   
-    btn.classList.remove("btn-add-cart");
-    btn.classList.add("btn-add-cart-added");
-    btn.innerHTML = "v";
-
-    setTimeout(() => {
-      btn.classList.remove("btn-add-cart-added");
-      btn.classList.add("btn-add-cart");
-      btn.innerHTML = "Agregar al carrito";
-    }, 1500);
   };
 
   return (

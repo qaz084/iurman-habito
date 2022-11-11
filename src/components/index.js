@@ -2,7 +2,6 @@ export * from './cart';
 export * from './footer';
 export * from './navbar';
 export * from './products';
-export * from './searchbar';
 export * from './user';
 export * from './ScrollToTopButton';
 export * from './Spinner';

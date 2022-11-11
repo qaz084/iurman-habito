@@ -1,7 +1,6 @@
-import {React,useState,useEffect} from 'react';
+import { React, useState, useEffect } from "react";
 
-
-//Boton que aparece luego de scrollear, para ir al top de la página 
+//Boton que aparece luego de scrollear, para ir al top de la página
 //-------------------------------------------------------------
 export const ScrollToTopButton = () => {
   const [scrollToTop, setScrollToTop] = useState(false);

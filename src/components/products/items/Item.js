@@ -7,7 +7,6 @@ export const Item = ({ ItemData }) => {
     <>
       <div className="flex flex-col items-center group w-52 shadow-lg rounded-md overflow-hidden">
         <Link to={`/product/detail/${id}`} className="w-full ">
-
           {/* -------Image------------- */}
           <div className="cursor-pointer overflow-hidden m-auto ">
             <img
@@ -16,7 +15,7 @@ export const Item = ({ ItemData }) => {
               alt={name}
             />
           </div>
-          
+
           {/* ------Product Info------------- */}
           <div className="flex flex-col  text-primary pl-6 bg-white group">
             <h4>{name}</h4>

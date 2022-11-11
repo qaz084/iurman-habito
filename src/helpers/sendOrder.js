@@ -3,37 +3,31 @@ import {
   collection,
   getFirestore,
   serverTimestamp,
-  doc,
-  updateDoc,
 } from "firebase/firestore";
 
-export const sendOrder = async (name,email,phone,cart,totalCost) => {
-
- const items=cart.map(item =>{
-
-  const obj= {
-    name:item.name,
-    quantity:item.count,
-    price:item.price
+export const sendOrder = async (name, email, phone, cart, totalCost) => {
+  const items = cart.map((item) => {
+    const obj = {
+      name: item.name,
+      quantity: item.count,
+      price: item.price,
     };
     return obj;
-  })
+  });
 
   const db = getFirestore();
   const ordersCollection = collection(db, "orders");
 
   const order = {
-    buyer: {name:name,email:email, phone:phone,},
+    buyer: { name: name, email: email, phone: phone },
     items: items,
     total: totalCost,
     date: serverTimestamp(),
   };
-  try{
-
+  try {
     const orderResult = await addDoc(ordersCollection, order);
-    console.log(orderResult.id)
     return orderResult.id;
-  }catch(e){
-    console.log('Error en Order Id:',e)
+  } catch (e) {
+    console.log("Error en Order Id:", e);
   }
 };

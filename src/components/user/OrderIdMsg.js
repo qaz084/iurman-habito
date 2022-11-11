@@ -10,8 +10,6 @@ export const OrderIdMsg = ({ orderId }) => {
   const handleCopyToClipboard = (e) => {
     e.preventDefault();
     setIdState(copyToClipboard(orderId));
-
-    console.log("ESTADO DEL ID:", idState);
   };
 
   const closeMenu = (e) => {
@@ -33,20 +31,21 @@ export const OrderIdMsg = ({ orderId }) => {
       >
         <div className="flex flex-col items-center justify-center w-96 h-80 rounded-lg m-auto bg-white z-40 overflow-hidden p-8">
           <div className="flex self-end">
-           
-              <span onClick={closeMenu} className="hover:cursor-pointer hover:font-bold text-xl text-primary -mt-8 mb-5">
-                x
-              </span>
-           
+            <span
+              onClick={closeMenu}
+              className="hover:cursor-pointer hover:font-bold text-xl text-primary -mt-8 mb-5"
+            >
+              x
+            </span>
           </div>
           <h1 className="font-bold text-primary text-2xl">Compra exitosa</h1>
-          <div className="bg-primary w-full h-[1px] mt-2 mb-10">
-
-          </div>
+          <div className="bg-primary w-full h-[1px] mt-2 mb-10"></div>
 
           <h2 className="mb-2 text-lg">Número de orden:</h2>
           <div className="flex items-center w-full ">
-            <h2 className=" w-3/4 p-1 border-2 border-primary rounded-bl-md rounded-tl-md">{orderId}</h2>
+            <h2 className=" w-3/4 p-1 border-2 border-primary rounded-bl-md rounded-tl-md">
+              {orderId}
+            </h2>
             <button
               onClick={handleCopyToClipboard}
               className="text-white w-1/4 h-full bg-primary rounded-sm active:bg-white active:text-primary  "
@@ -54,10 +53,13 @@ export const OrderIdMsg = ({ orderId }) => {
               copiar
             </button>
           </div>
-          {idState === true && <div className="flex w-full justify-center mt-4">
-            <h2 className="rounded-sm flex items-center justify-center bg-primary text-white  text-center h-8 w-28">Id Copiado</h2>
-          </div>
-          }
+          {idState === true && (
+            <div className="flex w-full justify-center mt-4">
+              <h2 className="rounded-sm flex items-center justify-center bg-primary text-white  text-center h-8 w-28">
+                Id Copiado
+              </h2>
+            </div>
+          )}
         </div>
       </div>
     </>

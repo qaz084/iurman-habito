@@ -19,15 +19,14 @@ export const UserLogin = () => {
     });
 
   const { cart, totalCost, clearCart } = useShoppingCart();
-  const [storedValue,setValue] = useLocalStorage("user", orderId);
-  console.log(setValue)
+  const [, setValue] = useLocalStorage("user", orderId);
 
   const sendInformation = () => {
     sendOrder(name, email, phone, cart, totalCost).then((response) => {
       setOrderId(response);
       setValue(response);
     });
-    
+
     clearCart();
     window.localStorage.clear();
   };

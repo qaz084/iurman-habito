@@ -1,16 +1,12 @@
 import { AppRouter } from "./router/AppRouter";
-import {CartContext,UserContext} from "./context";
+import { CartContext } from "./context";
 
 export const HabitoApp = () => {
   return (
     <>
       <CartContext>
-      <UserContext>
-
-        <AppRouter/>
-
-      </UserContext>
+        <AppRouter />
       </CartContext>
     </>
-  )
-}
+  );
+};

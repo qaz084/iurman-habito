@@ -1,5 +1,3 @@
-//"Yzytpv82fIQSOAuYoY4p"
-
 import { db } from "../firebase/firebase";
 import { getDoc, collection, doc } from "firebase/firestore";
 
