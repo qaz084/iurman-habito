@@ -24,7 +24,7 @@ En el proyecto también se hizo uso de **customHooks** y funciones helpers adem�
 *Al proyecto le falta mejorar el aspecto responsive y la validación del formulario de registro del usuario que quiere realizar la compra.*
 
 
-####Muchas gracias por leer. 😊
+### Muchas gracias por leer. 😊
 
 
 
