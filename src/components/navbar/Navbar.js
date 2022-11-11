@@ -62,18 +62,17 @@ export const Navbar = () => {
           />
         </Link>
 
-        {isLoading ? (
-          <Spinner />
-        ) : (
-          <ul className="flex text-white space-x-10">
-            {dataFetched.map((dato) => (
-              <Link  to={`/category/${dato.name}`} key={dato.id}>
-             
-                <li className="text-white hover:underline">{dato.name}</li>
-              </Link>
-            ))}
-          </ul>
-        )}
+        {
+          isLoading?<Spinner/>
+          :<ul className="flex text-white space-x-10">{ dataFetched.map(dato=>(
+
+          <Link to={`/category/${dato.name}`} key={dato.name}> <li className="text-white hover:underline">{dato.name}</li>
+</Link>  
+          ))
+
+           } </ul>
+          }
+        
 
         <div className="  hidden sm:flex  sm:items-center sm:space-x-8">
           <Link onClick={handleUserBagMessage}>

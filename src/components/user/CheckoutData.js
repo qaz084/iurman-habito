@@ -8,8 +8,9 @@ export const CheckoutData = ({ items, total }) => {
         <div>
           <div>
             {items.map((producto) => (
-              <div key={producto.name} className="bg-[#4444440e] p-4">
-                <h2 className="text-lg  font-bold">Producto:</h2>
+              <div key={producto.name}>
+
+                <h2 className="text-lg mb-4">Producto:</h2>
                 <div>
                   <div className="flex text-xl mb-4 ">
                     <h2>{producto.name} x</h2>
@@ -17,6 +18,7 @@ export const CheckoutData = ({ items, total }) => {
                   </div>
                 </div>
               </div>
+              
             ))}
           </div>
           <div className="h-[1px] bg-primary mb-4"></div>

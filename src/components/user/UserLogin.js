@@ -19,7 +19,7 @@ export const UserLogin = () => {
     });
 
   const { cart, totalCost, clearCart } = useShoppingCart();
-  const [, setValue] = useLocalStorage("user", orderId);
+  const [,setValue] = useLocalStorage("user", orderId);
 
   const sendInformation = () => {
     sendOrder(name, email, phone, cart, totalCost).then((response) => {

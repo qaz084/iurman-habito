@@ -38,6 +38,7 @@ export const User = () => {
       const { total } = dataBuyer;
       total && setTotal(total);
       items && setItems(items);
+
       return { items, total };
     };
     handleData();

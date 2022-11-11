@@ -24,7 +24,7 @@ export const sendOrder = async (name, email, phone, cart, totalCost) => {
     total: totalCost,
     date: serverTimestamp(),
   };
-  try {
+  try{
     const orderResult = await addDoc(ordersCollection, order);
     return orderResult.id;
   } catch (e) {
