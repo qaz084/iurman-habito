@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import HabitoLogo from "./images/logo_blanco.svg";
+import HabitoLogo from "../../images/logo_blanco.svg";
 import { CartWidget, UserWidget } from "../../components";
 import { ContextCart } from "../../context/CartContext";
 import { useChangeNavTheme } from "../../customHooks/useChangeNavTheme";
@@ -66,7 +66,7 @@ export const Navbar = () => {
           isLoading?<Spinner/>
           :<ul className="flex text-white space-x-10">{ dataFetched.map(dato=>(
 
-          <Link to={`/category/${dato.name}`} key={dato.name}> <li className="text-white hover:underline">{dato.name}</li>
+          <Link to={`/category/${dato.name}`} > <li className="text-white hover:underline">{dato.name}</li>
 </Link>  
           ))
 

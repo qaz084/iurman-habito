@@ -8,7 +8,7 @@ import {
 import Home from "../Home";
 import { useShoppingCart } from "../context/CartContext";
 import { UserLogin } from "../components/user/UserLogin";
-import { User } from "../components/user/User";
+import { User } from "./components/user/User";
 
 export const AppRouter = () => {
   const { cart } = useShoppingCart();
@@ -19,7 +19,7 @@ export const AppRouter = () => {
       <Routes>
         <Route path="/" element={<Home />} />
   
-        <Route path="./user" element={<User />}/>
+        <Route path="user" element={<User />}/>
 
 
         <Route path="user/register" element={<UserLogin />} />
