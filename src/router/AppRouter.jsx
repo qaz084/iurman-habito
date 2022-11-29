@@ -28,7 +28,7 @@ export const AppRouter = () => {
         <Route path="./" element={<Home />} />
 
         {storage ? (
-          <Route path="/user" element={ <Cart /> } />
+          <Route path="/user" element={ <User /> } />
         ) : (
           <Route element={<Navigate to="./" />} />
         )}
