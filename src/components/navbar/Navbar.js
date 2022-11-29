@@ -20,7 +20,7 @@ export const Navbar = () => {
 
   const handleUserBagMessage = () => {
     const storageData = JSON.parse(localStorage.getItem("user"));
-    
+    console.log('CLICK',storageData )
     if (storageData) {
       setStorage(storageData);
       setUserVisible(false);
