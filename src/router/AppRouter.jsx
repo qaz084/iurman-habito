@@ -35,9 +35,9 @@ export const AppRouter = () => {
 
         <Route path="/user/register" element={<UserLogin />} />
 
-        <Route path="/product/detail/:id" element={<ItemDetailContainer />} />
+        <Route path="./product/detail/:id" element={<ItemDetailContainer />} />
 
-        <Route path="/category/:id" element={<ItemListContainer />} />
+        <Route path="./category/:id" element={<ItemListContainer />} />
 
         {cart.length >= 1 ? (
           <Route path="/cart" element={<Cart />} />

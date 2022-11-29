@@ -43,7 +43,7 @@ export const User = () => {
     };
     handleData();
   }, [dataBuyer, setDataBuyer]);
-
+console.log('LOGOUT',logOut)
   return (
     <>
        {/* {logOut && <Navigate to="/" />}   */}
