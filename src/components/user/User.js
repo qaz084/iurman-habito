@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect,useState  } from "react";
 import { Navigate } from "react-router-dom";
 import { handleBuySearch } from "../../helpers/handleBuySearch";
 import { CheckoutData } from "./CheckoutData";
@@ -13,7 +12,7 @@ export const User = () => {
 
   const handlePasteId = async () => {
     setValueId("");
-    const copied = await await navigator.clipboard.readText();
+    const copied =await navigator.clipboard.readText();
     setValueId(copied.trim());
   };
   const handleWrittedId = ({ target }) => {
