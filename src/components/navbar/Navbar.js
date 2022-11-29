@@ -24,7 +24,6 @@ export const Navbar = () => {
     if (storageData) {
       setStorage(storageData);
       setUserVisible(false);
-      console.log("click");
       // return <Navigate to="/user" />
       // window.location.replace("./user");
     } else {
