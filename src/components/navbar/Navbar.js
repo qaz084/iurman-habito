@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import HabitoLogo from "../../images/logo_blanco.svg";
+import HabitoLogo from "./logo_blanco.svg";
 import { CartWidget, UserWidget } from "../../components";
 import { ContextCart } from "../../context/CartContext";
 import { useChangeNavTheme } from "../../customHooks/useChangeNavTheme";

@@ -1,0 +1,70 @@
+{"categories":[
+ {
+  "name": "Aqua",
+  "price": 4700,
+  "items": [
+   "ballena",
+   "delfin",
+   "foca",
+   "oso-polar",
+   "pez",
+   "pinguino",
+   "tiburon",
+   "tortuga"
+  ],
+  "stock":5,
+  "description": "     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo           ",
+  "img": "https://firebasestorage.googleapis.com/v0/b/tante-8509e.appspot.com/o/Aqua%2Faqua-delfin.jpg?alt=media&token=ba55e8f0-dc4f-4f81-9eef-46bc60d83385"
+ },
+ {
+  "name": "Estancia",
+  "price": 4700,
+  "items": [
+   "caballo",
+   "cerdo",
+   "chivito",
+   "conejo",
+   "gallina",
+   "oveja",
+   "pato",
+   "vaca"
+  ],
+  "stock":5,
+  "description": "     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo           ",
+  "img": "https://firebasestorage.googleapis.com/v0/b/tante-8509e.appspot.com/o/Estancia%2Festancia-vaca.jpg?alt=media&token=5767ca18-a6db-427e-a065-c0423a37667b"
+ },
+ {
+  "name": "Jurasico",
+  "price": 4700,
+  "items": [
+   "jankylosauro",
+   "jbrontosaurio",
+   "jdiplodocus",
+   "jestegosaurio",
+   "jparasauro",
+   "jpterodactilo",
+   "t-rex",
+   "triceratop"
+  ],
+  "stock":5,
+  "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo",
+  "img": "https://firebasestorage.googleapis.com/v0/b/tante-8509e.appspot.com/o/Jurasico%2Fjurasico-t-rex.jpg?alt=media&token=6411895d-d032-47cb-a06b-85e6c9a322e8"
+ },
+ {
+  "name": "Safari",
+  "price": 4700,
+  "items": [
+   "cocodrilo",
+   "elefante",
+   "girafa",
+   "leona",
+   "mono",
+   "oso",
+   "puercoespin",
+   "serpiente"
+  ],
+  "stock":5,
+  "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis aperiam pariatur in, quo quaerat doloribus quasi eaque sequi explicabo",
+  "img": "https://firebasestorage.googleapis.com/v0/b/tante-8509e.appspot.com/o/Safari%2Fsafari-elefante.jpg?alt=media&token=5235e31e-b23c-4b08-af34-9e58b0b1e758"
+ }
+]}

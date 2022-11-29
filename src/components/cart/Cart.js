@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useShoppingCart } from "../../context/CartContext";
 import { CartItem, BuyBtn, CancelBuyBtn, CartTtotalCost } from "./";
 import { ScrollToTopButton } from "../ScrollToTopButton";
-import HabitoLogo from "../../images/logo_negro.svg";
+import HabitoLogo from "./logo_negro.svg";
 
 export const Cart = () => {
   const { cart } = useShoppingCart();
