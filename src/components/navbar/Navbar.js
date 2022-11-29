@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 import HabitoLogo from "./logo_blanco.svg";
 import { CartWidget, UserWidget } from "../../components";
 import { ContextCart } from "../../context/CartContext";
@@ -12,18 +12,21 @@ import { Spinner } from "../../components/Spinner";
 export const Navbar = () => {
   const { cartBag } = useContext(ContextCart);
   const [isBagEmpty, setIsBagEmpty] = useState(false);
-  const [, setStorage] = useState("");
+  const [storage, setStorage] = useState("");
   const [userVisible, setUserVisible] = useState(false);
   const { id } = useParams();
   const { dataFetched, isLoading } = useFetch({ id });
+ 
 
   const handleUserBagMessage = () => {
     const storageData = JSON.parse(localStorage.getItem("user"));
-
+    
     if (storageData) {
       setStorage(storageData);
       setUserVisible(false);
-      window.location.replace("./user");
+      console.log("click");
+      // return <Navigate to="/user" />
+      // window.location.replace("./user");
     } else {
       setUserVisible(true);
       setTimeout(() => {
@@ -62,21 +65,22 @@ export const Navbar = () => {
           />
         </Link>
 
-        {
-          isLoading?<Spinner/>
-          :<ul className="flex text-white space-x-10">{ dataFetched.map(dato=>(
-
-          <Link to={`/category/${dato.name}`} key={dato.name}> <li className="text-white hover:underline">{dato.name}</li>
-</Link>  
-          ))
-
-           } </ul>
-          }
-        
+        {isLoading ? (
+          <Spinner />
+        ) : (
+          <ul className="flex text-white space-x-10">
+            {dataFetched.map((dato) => (
+              <Link to={`/category/${dato.name}`} key={dato.name}>
+                {" "}
+                <li className="text-white hover:underline">{dato.name}</li>
+              </Link>
+            ))}{" "}
+          </ul>
+        )}
 
         <div className="  hidden sm:flex  sm:items-center sm:space-x-8">
-          <Link onClick={handleUserBagMessage}>
-            <UserWidget />
+          <Link to={"/user"} onClick={handleUserBagMessage}>
+            <UserWidget userStorage={storage} />
           </Link>
 
           <Link
