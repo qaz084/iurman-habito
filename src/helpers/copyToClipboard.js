@@ -1,5 +1,6 @@
 export const copyToClipboard = (orderId) => {
-  navigator.clipboard.writeText(orderId);
-
+    
+    navigator.clipboard.writeText(orderId)
+       
   return true;
 };

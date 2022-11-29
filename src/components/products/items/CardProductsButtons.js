@@ -17,6 +17,8 @@ export const CardProductsButtons = ({ itemStocks, countToCart }) => {
     }
   };
 
+
+
   return (
     <div className="flex flex-col flex-none h-28 justify-between">
       <div className="flex flex-row mt-3   mx-6 items-center ">
