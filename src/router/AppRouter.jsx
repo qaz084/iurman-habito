@@ -25,12 +25,12 @@ export const AppRouter = () => {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="./" element={<Home />} />
 
         {storage ? (
           <Route path="/user" element={<User />} />
         ) : (
-          <Route element={<Navigate to="/" />} />
+          <Route element={<Navigate to="./" />} />
         )}
 
         <Route path="/user/register" element={<UserLogin />} />
