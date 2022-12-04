@@ -21,11 +21,7 @@ export const User = () => {
     setValueId(writtedId);
   };
 
-  const handleLogOut = () => {
-    localStorage.clear();
-    setLogOut(true);
-    // window.location.href="/";
-  };
+
 
   const handleSearchById = async () => {
     const product = await handleBuySearch(valueId);
@@ -43,7 +39,14 @@ export const User = () => {
     };
     handleData();
   }, [dataBuyer, setDataBuyer]);
+
+  const handleLogOut = () => {
+    localStorage.clear();
+    setLogOut(true);
+    // window.location.href="/";
+  };
 console.log('LOGOUT',logOut)
+
   return (
     <>
        {/* {logOut && <Navigate to="/" />}   */}

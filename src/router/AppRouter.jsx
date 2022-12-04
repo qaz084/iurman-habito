@@ -25,26 +25,26 @@ export const AppRouter = () => {
     <>
       <Navbar />
       <Routes>
-        <Route path="./" element={<Home />} />
+        <Route path="/" element={<Home />} />
 
-        {console.log('STORAGEE',storage)}
+        {console.log('STORAGEE',storage.length())}
         {
-          storage? (
+          storage.user? (
           <Route path="/user" element={ <User /> } />
         ) : (
-          <Route element={<Navigate to="./" />} />
+          <Route element={<Navigate to="/" />} />
         )}
 
         <Route path="/user/register" element={<UserLogin />} />
 
-        <Route path="./product/detail/:id" element={<ItemDetailContainer />} />
+        <Route path="/product/detail/:id" element={<ItemDetailContainer />} />
 
-        <Route path="./category/:id" element={<ItemListContainer />} />
+        <Route path="/category/:id" element={<ItemListContainer />} />
 
         {cart.length >= 1 ? (
           <Route path="/cart" element={<Cart />} />
         ) : (
-          <Route element={<Navigate to="./" />} />
+          <Route element={<Navigate to="/" />} />
         )}
 
         <Route path="/*" element={<Home />} />
