@@ -78,7 +78,7 @@ export const Navbar = () => {
         )}
 
         <div className="  hidden sm:flex  sm:items-center sm:space-x-8">
-          <Link to={"/user"} onClick={handleUserBagMessage}>
+          <Link to={"./user"} onClick={handleUserBagMessage}>
             <UserWidget/>
           </Link>
 
