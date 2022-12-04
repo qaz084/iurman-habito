@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/iurman-habito/static/css/main.d2a87f66.css",
-    "main.js": "/iurman-habito/static/js/main.0eed01c8.js",
+    "main.js": "/iurman-habito/static/js/main.0cf9cdee.js",
     "static/media/banner_02.png": "/iurman-habito/static/media/banner_02.bb2dc7cde478c1137624.png",
     "static/media/register-left-img.jpg": "/iurman-habito/static/media/register-left-img.3ad4e5bf8cdc0e4afa5c.jpg",
     "static/media/logo_blanco.svg": "/iurman-habito/static/media/logo_blanco.0b95794c2171e260b270efb678143f2a.svg",
     "static/media/logo_negro.svg": "/iurman-habito/static/media/logo_negro.a4919bfb4be78e4aebf3b69f4270ba21.svg",
     "index.html": "/iurman-habito/index.html",
     "main.d2a87f66.css.map": "/iurman-habito/static/css/main.d2a87f66.css.map",
-    "main.0eed01c8.js.map": "/iurman-habito/static/js/main.0eed01c8.js.map"
+    "main.0cf9cdee.js.map": "/iurman-habito/static/js/main.0cf9cdee.js.map"
   },
   "entrypoints": [
     "static/css/main.d2a87f66.css",
-    "static/js/main.0eed01c8.js"
+    "static/js/main.0cf9cdee.js"
   ]
 }
