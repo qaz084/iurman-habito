@@ -18,7 +18,7 @@ export const AppRouter = () => {
   useEffect(() => {
     const local = localStorage.getItem("user");
     setStorage(local);
-    console.log("LOCAL STORAGE", localStorage);
+    console.log("CAMBIO LOCAL STORAGE", localStorage);
   }, [storage, cart]);
 
   return (
