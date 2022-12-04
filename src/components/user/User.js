@@ -48,6 +48,7 @@ console.log('LOGOUT',logOut) */
 
   return (
     <>
+    <h1>ENTRO A USER</h1>
        {/* {logOut && <Navigate to="/" />}   */}
     {/*   <div className="w-screen h-screen  flex items-center justify-center">
         <div className="w-2/4 mt-20 bg-white p-10 rounded-md shadow-2xl">
@@ -103,7 +104,7 @@ console.log('LOGOUT',logOut) */
           </div>
         </div>
       </div> */}
-      <h1>ENTRO A USER</h1>
+      
     </>
   );
 };

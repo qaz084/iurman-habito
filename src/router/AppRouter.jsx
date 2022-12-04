@@ -27,7 +27,7 @@ export const AppRouter = () => {
       <Routes>
         <Route path="/" element={<Home />} />
 
-        {console.log('STORAGEE',storage.length())}
+       
         {
           storage.user? (
           <Route path="/user" element={<User />} />

@@ -20,7 +20,7 @@ export const Navbar = () => {
 
   const handleUserBagMessage = () => {
     const storageData = JSON.parse(localStorage.getItem("user"));
-    console.log('CLICK',storageData )
+ 
     if (storageData) {
       setStorage(storageData);
       setUserVisible(false);
@@ -69,7 +69,7 @@ export const Navbar = () => {
         ) : (
           <ul className="flex text-white space-x-10">
             {dataFetched.map((dato) => (
-              <Link to={`/category/${dato.name}`} key={dato.name}>
+              <Link to={`./category/${dato.name}`} key={dato.name}>
                 {" "}
                 <li className="text-white hover:underline">{dato.name}</li>
               </Link>
@@ -78,12 +78,12 @@ export const Navbar = () => {
         )}
 
         <div className="  hidden sm:flex  sm:items-center sm:space-x-8">
-          <Link to={"/user"} onClick={handleUserBagMessage}>
+          <Link to={"./user"} onClick={handleUserBagMessage}>
             <UserWidget userStorage={storage} />
           </Link>
 
           <Link
-            to={"/cart"}
+            to={"./cart"}
             className=" relative flex items-center justify-center"
             onClick={handleCartBagMessage}
           >
