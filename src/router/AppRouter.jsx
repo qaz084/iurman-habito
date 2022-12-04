@@ -29,11 +29,10 @@ export const AppRouter = () => {
 
         {console.log('STORAGEE',storage.length())}
         {
-          storage.user!==null? (
-          <Route path="/user" element={<User />} />
-        ) : (
+          storage.length >= 1?
+          <Route path="/user" element={<User />} />:
           <Route element={<Navigate to="/" />} />
-        )}
+        }
 
         <Route path="/user/register" element={<UserLogin />} />
 
