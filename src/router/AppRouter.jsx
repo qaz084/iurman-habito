@@ -18,7 +18,7 @@ export const AppRouter = () => {
   useEffect(() => {
     const local = localStorage.getItem("user");
     setStorage(local);
-    console.log("CAMBIO LOCAL STORAGE", localStorage);
+    console.log("CAMBIO 2 LOCAL STORAGE", localStorage);
   }, [storage, cart]);
 
   return (
@@ -27,9 +27,9 @@ export const AppRouter = () => {
       <Routes>
         <Route path="/" element={<Home />} />
 
-        {console.log('STORAGEE',storage.length())}
+        
         {
-          storage.length >= 1?
+          storage!==null?
           <Route path="/user" element={<User />} />:
           <Route element={<Navigate to="/" />} />
         }
