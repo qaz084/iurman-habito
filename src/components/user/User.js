@@ -4,6 +4,7 @@ import { handleBuySearch } from "../../helpers/handleBuySearch";
 import { CheckoutData } from "./CheckoutData";
 
 export const User = () => {
+
   const [valueId, setValueId] = useState("");
   const [logOut, setLogOut] = useState(false);
   const [dataBuyer, setDataBuyer] = useState("");
@@ -20,8 +21,6 @@ export const User = () => {
     const writtedId = target.value;
     setValueId(writtedId);
   };
-
-
 
   const handleSearchById = async () => {
     const product = await handleBuySearch(valueId);
@@ -50,7 +49,7 @@ console.log('LOGOUT',logOut)
   return (
     <>
        {/* {logOut && <Navigate to="/" />}   */}
-      <div className="w-screen h-screen  flex items-center justify-center">
+    {/*   <div className="w-screen h-screen  flex items-center justify-center">
         <div className="w-2/4 mt-20 bg-white p-10 rounded-md shadow-2xl">
           <div className="text-2xl mb-5 text-primary">
             {dataBuyer.buyer ? (
@@ -103,7 +102,8 @@ console.log('LOGOUT',logOut)
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
+      <h1>ENTRO A USER</h1>
     </>
   );
 };
