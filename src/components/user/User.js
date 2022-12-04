@@ -11,7 +11,7 @@ export const User = () => {
   const [items, setItems] = useState([]);
   const [total, setTotal] = useState(0);
 
-  const handlePasteId = async () => {
+/*   const handlePasteId = async () => {
     setValueId("");
     const copied =await navigator.clipboard.readText();
     setValueId(copied.trim());
@@ -44,7 +44,7 @@ export const User = () => {
     setLogOut(true);
     // window.location.href="/";
   };
-console.log('LOGOUT',logOut)
+console.log('LOGOUT',logOut) */
 
   return (
     <>
